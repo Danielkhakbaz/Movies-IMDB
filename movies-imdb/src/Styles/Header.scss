@@ -1,0 +1,13 @@
+.wrapper {
+    background: #202020;
+    display: flex;
+}
+.wrapper img {
+    width: 100%;
+    margin: 10%;
+}
+@media (min-width: 768px){
+    .wrapper img{
+        width: 120%;
+    }
+}
