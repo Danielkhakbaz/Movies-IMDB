@@ -1,6 +1,7 @@
 import React from "react";
 
 const Movies = ({ SearchQuery, Movies, ImageURL }) => {
+    console.log(Movies);
     return (
         <>
             <div className="Movies">

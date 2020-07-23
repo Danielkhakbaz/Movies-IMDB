@@ -11,7 +11,6 @@ class Home extends Component {
         SearchQuery: "",
     };
     async componentDidMount() {
-        const { Movies } = this.state;
         for (let i = 1; i <= 4; i++) {
             if (i !== 2) {
                 let { data } = await axios.get(
@@ -19,7 +18,7 @@ class Home extends Component {
                 );
                 if (Movies.length !== 0) {
                     this.setState({
-                        Movies: [...Movies, ...data.results],
+                        Movies: [...this.state.Movies, ...data.results],
                     });
                 } else {
                     this.setState({ Movies: data.results });
