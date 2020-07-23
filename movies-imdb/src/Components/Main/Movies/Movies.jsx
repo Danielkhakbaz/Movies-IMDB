@@ -1,20 +1,19 @@
 import React from "react";
 
-const Movies = ({ searchQuery, movies, image }) => {
-    console.log(movies);
+const Movies = ({ SearchQuery, Movies, ImageURL }) => {
     return (
         <>
-            <div className="film">
-                <h1 className="p-4 movies__h1">
-                    {searchQuery ? "Searched Movies" : "Popular Movies"}
+            <div className="Movies">
+                <h1 className="Movies__h1 p-4">
+                    {SearchQuery ? "Searched Movies" : "Popular Movies"}
                 </h1>
-                <div className="movies">
-                    {movies.map((movie) => (
-                        <React.Fragment key={movie.id}>
+                <div className="Movies__elements p-2">
+                    {Movies.map((Movie) => (
+                        <React.Fragment key={Movie.id}>
                             <img
-                                className="movies__element"
-                                src={`${image}${movie.poster_path}`}
-                                alt=""
+                                className="Movies__elements--img"
+                                src={`${ImageURL}${Movie.poster_path}`}
+                                alt="Every Single Movie Pic"
                             />
                         </React.Fragment>
                     ))}

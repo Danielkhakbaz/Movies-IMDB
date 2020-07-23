@@ -2,7 +2,9 @@ body {
     margin: 0;
     padding: 0;
 }
-.wrapper {
+
+
+header {
     height: 11vh;
     background-image: linear-gradient(
         to bottom,
@@ -11,11 +13,13 @@ body {
     );
     display: flex;
 }
-.wrapper img {
+header img {
     width: 100%;
     margin: 10%;
 }
-.header__div--background {
+
+
+.Poster {
     width: 100%;
     height: 89vh;
     display: flex;
@@ -30,12 +34,12 @@ body {
     background-size: cover;
     justify-content: space-evenly;
 }
-.header__h1 {
+.Poster__h1 {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     color: rgb(240, 240, 240);
     text-shadow: 1px 1px #1d1d1d;
 }
-.header__p {
+.Poster__p {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     width: 75%;
     color: rgb(240, 240, 240);
@@ -44,45 +48,40 @@ body {
 }
 
 @media (max-width: 750px) {
-    .header__h1 {
+    .Poster__h1 {
         font-size: 28px;
     }
-    .header__p {
+    .Poster__p {
         font-size: 18px;
     }
 }
 
-.searchbar__nav {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.397), white);
+.SearchBox {
+    background-image: linear-gradient(to bottom, #66666647, white);
 }
-.searchbar__nav input {
+.SearchBox input {
     display: flex;
+    box-shadow: 6px 4px 5px #969696;
 }
 
-.movies__h1 {
+.Movies__h1 {
     text-align: center;
     text-shadow: 1px 1px #1d1d1d;
 }
-.movies {
+.Movies__elements {
     display: grid;
     grid-template-columns: repeat(5, 4fr);
     grid-gap: 40px;
 }
-.film {
-    background-image: linear-gradient(
-        to bottom,
-        rgb(250, 250, 250),
-        rgb(165, 165, 165)
-    );
-}
-.movies__element {
-    animation: animateGrid 0.5s;
+.Movies__elements--img {
+    animation: AnimateGrid 0.5s;
     justify-self: center;
     border: 1px solid rgb(225, 225, 225);
     box-shadow: 2px 2px 5px #646464;
     border-radius: 5%;
+    cursor: pointer;
 }
-@keyframes animateGrid {
+@keyframes AnimateGrid {
     from {
         opacity: 0;
     }
@@ -113,32 +112,32 @@ body {
 }
 
 @media screen and (min-width: 410px) and (max-width: 412px) {
-    .wrapper img {
+    header img {
         width: 80%;
     }
 }
 @media screen and (min-width: 319px) and (max-width: 321px) {
-    .header__h1 {
+    .Poster__h1 {
         font-size: 20px;
     }
-    .header__p {
+    .Poster__p {
         font-size: 15px;
     }
 }
 @media screen and (min-width: 374px) and (max-width: 376px) {
-    .wrapper img {
+    header img {
         width: 85%;
     }
 }
 
 @media screen and (min-width: 1023px) and (max-width: 1025px) {
-    .wrapper img {
+    header img {
         width: 250%;
     }
-    .header__h1 {
+    .Poster__h1 {
         font-size: 55px;
     }
-    .header__p {
+    .Poster__p {
         font-size: 35px;
     }
 }

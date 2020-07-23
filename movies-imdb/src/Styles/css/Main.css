@@ -1,5 +1,4 @@
 body {
-  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -55,11 +54,10 @@ body {
 }
 
 .searchbar__nav {
-  background: #191b1b;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.397), white);
 }
 
 .searchbar__nav input {
-  border: #363535;
   display: flex;
 }
 
@@ -72,15 +70,19 @@ body {
   display: grid;
   grid-template-columns: repeat(5, 4fr);
   grid-gap: 40px;
-  background: linear-gradient(to bottom rgba, #fff, #000);
+}
+
+.film {
+  background-image: linear-gradient(to bottom, #fafafa, #a5a5a5);
 }
 
 .movies__element {
   animation: animateGrid 0.5s;
   justify-self: center;
   border: 1px solid #e1e1e1;
-  box-shadow: 2px 2px 5px #191a1b;
+  box-shadow: 2px 2px 5px #646464;
   border-radius: 5%;
+  cursor: pointer;
 }
 
 @keyframes animateGrid {

@@ -1,84 +1,66 @@
 import React, { Component } from "react";
-import MainPicture from "../MainPicture/MainPicture";
-import SearchBar from "../../Common/SearchBar/SearchBar";
+import Poster from "../Poster/Poster";
+import SearchBox from "../../Common/SearchBox/SearchBox";
 import Movies from "../../Main/Movies/Movies";
-import { apiURL, apiKEY, imageBaseURL, posterSize } from "../../../Config.json";
+import { ApiURL, ApiKEY, ImageBaseURL, PosterSize } from "../../../Config.json";
+import axios from "axios";
 
 class Home extends Component {
     state = {
-        movies: [],
-        loading: false,
-        currentPage: 0,
-        totalPage: 0,
-        searchQuery: "",
+        Movies: [],
+        SearchQuery: "",
     };
-    componentDidMount() {
-        this.setState({ loading: true });
-        const endPoint = `${apiURL}movie/popular?api_key=${apiKEY}&language=en-US&page=1`;
-        this.fetchItems(endPoint);
+    async componentDidMount() {
+        const { Movies } = this.state;
+        for (let i = 1; i <= 4; i++) {
+            if (i !== 2) {
+                let { data } = await axios.get(
+                    `${ApiURL}movie/popular?api_key=${ApiKEY}&language=en-US&page=${i}`
+                );
+                if (Movies.length !== 0) {
+                    this.setState({
+                        Movies: [...Movies, ...data.results],
+                    });
+                } else {
+                    this.setState({ Movies: data.results });
+                }
+            }
+        }
     }
-    fetchItems = (endPoint) => {
-        fetch(endPoint)
-            .then((data) => data.json())
-            .then((data) => {
-                this.setState({
-                    movies: [...this.state.movies, ...data.results],
-                    heroImage: this.state.heroImage || data.results[0],
-                    loading: false,
-                    currentPage: data.page,
-                    totalPage: data.total_pages,
-                });
-            });
-    };
-    loadingMoreMovies = () => {
-        let endPoint = "";
-        this.setState({ loading: true });
-
-        if (this.state.searchQuery === "") {
-            endPoint = `${apiURL}movie/popular?api_key=${apiKEY}&language=en-US&page=${
-                this.state.currentPage + 1
-            }`;
-        } else {
-            endPoint = `${apiURL}movie/popular?api_key=${apiKEY}&language=en-US&query${
-                this.state.searchQuery
-            }&page=${this.state.currentPage + 1}`;
-        }
-        this.fetchItems(endPoint);
-    };
-    getAllData = () => {
-        const { movies, searchQuery } = this.state;
-        let searched = movies;
-        if (searchQuery) {
-            window.scrollTo(0, 500);
-        }
-        if (searchQuery) {
-            searched = movies.filter((movie) =>
-                movie.title.toLowerCase().startsWith(searchQuery.toLowerCase())
-            );
-        }
-        return { searched };
-    };
-    handleSearching = (query) => {
-        this.setState({ searchQuery: query });
-    };
     render() {
-        const { searchQuery } = this.state;
-        const { searched } = this.getAllData();
+        const { SearchQuery } = this.state;
+        const { Searched } = this.SearchEngine();
         return (
             <>
-                <MainPicture />
-                <SearchBar
-                    value={searchQuery}
-                    onChange={this.handleSearching}
+                <Poster />
+                <SearchBox
+                    Value={SearchQuery}
+                    OnChange={this.HandleSearching}
                 />
                 <Movies
-                    searchQuery={searchQuery}
-                    movies={searched}
-                    image={`${imageBaseURL}${posterSize}`}
+                    SearchQuery={SearchQuery}
+                    Movies={Searched}
+                    ImageURL={`${ImageBaseURL}${PosterSize}`}
                 />
             </>
         );
     }
+    SearchEngine = () => {
+        const { Movies, SearchQuery } = this.state;
+        let Searched = Movies;
+        if (SearchQuery) {
+            window.scrollTo(0, 500);
+        }
+        if (SearchQuery) {
+            Searched = Movies.filter((Movie) =>
+                Movie.title.toLowerCase().startsWith(SearchQuery.toLowerCase())
+            );
+        }
+        return { Searched };
+    };
+    HandleSearching = (Query) => {
+        this.setState({ SearchQuery: Query });
+    };
 }
 
 export default Home;

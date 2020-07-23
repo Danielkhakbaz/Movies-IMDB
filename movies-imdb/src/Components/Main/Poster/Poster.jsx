@@ -1,11 +1,11 @@
 import React from "react";
 
-const MainPicture = () => {
+const Poster = () => {
     return (
         <>
-            <div className="header__div--background">
-                <h1 className="m-4 header__h1">Avengers: Infinity War</h1>
-                <p className="m-4 header__p">
+            <section className="Poster">
+                <h1 className="Poster__h1 m-4">Avengers: Infinity War</h1>
+                <p className="Poster__p m-4">
                     As the Avengers and their allies have continued to protect
                     the world from threats too large for any one hero to handle,
                     a new danger has emerged from the cosmic shadows: Thanos. A
@@ -16,9 +16,9 @@ const MainPicture = () => {
                     moment - the fate of Earth and existence itself has never
                     been more uncertain.
                 </p>
-            </div>
+            </section>
         </>
     );
 };
 
-export default MainPicture;
+export default Poster;
