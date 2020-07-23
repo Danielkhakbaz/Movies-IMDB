@@ -7,11 +7,11 @@ const Movies = ({ SearchQuery, Movies, ImageURL }) => {
                 <h1 className="Movies__h1 p-4">
                     {SearchQuery ? "Searched Movies" : "Popular Movies"}
                 </h1>
-                <div className="Movies__elements p-2">
+                <div className="Movies__Elements p-2">
                     {Movies.map((Movie) => (
                         <React.Fragment key={Movie.id}>
                             <img
-                                className="Movies__elements--img"
+                                className="Movies__Elements--img"
                                 src={`${ImageURL}${Movie.poster_path}`}
                                 alt="Every Single Movie Pic"
                             />

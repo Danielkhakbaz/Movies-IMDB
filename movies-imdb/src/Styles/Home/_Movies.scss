@@ -1,0 +1,48 @@
+@media screen and (max-width: 501px) {
+    .Movies {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media screen and (max-width: 695px) {
+    .Movies {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 937px) {
+    .Movies {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width: 1177px) {
+    .Movies {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.Movies {
+    grid-template-columns: repeat(5, 1fr);
+}
+.Movies__h1 {
+    text-align: center;
+    text-shadow: 1px 1px #1d1d1d;
+}
+.Movies__Elements {
+    display: grid;
+    grid-template-columns: repeat(5, 4fr);
+    grid-gap: 40px;
+}
+.Movies__Elements--img {
+    animation: AnimateGrid 0.5s;
+    justify-self: center;
+    border: 1px solid rgb(225, 225, 225);
+    box-shadow: 2px 2px 5px #646464;
+    border-radius: 5%;
+    cursor: pointer;
+}
+@keyframes AnimateGrid {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
