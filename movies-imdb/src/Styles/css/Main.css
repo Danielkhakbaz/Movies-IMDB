@@ -4,7 +4,106 @@ body {
   padding: 0;
 }
 
-.header {
-  font: 100;
+.wrapper {
+  height: 11vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), black);
+  display: flex;
+}
+
+.wrapper img {
+  width: 100%;
+  margin: 10%;
+}
+
+.header__div--background {
+  width: 100%;
+  height: 89vh;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.98), rgba(0, 0, 0, 0.4)), url(https://wallpaperstream.com/wallpapers/thumbnails/avengers-infinity-war/Avengers-Infinity-War-Full-Casts-Poster_thumb2x.jpg);
+  background-position: center;
+  background-size: cover;
+  justify-content: space-evenly;
+}
+
+.header__h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #f0f0f0;
+  text-shadow: 1px 1px #1d1d1d;
+}
+
+.header__p {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  width: 75%;
+  color: #f0f0f0;
+  text-shadow: 1px 1px #1d1d1d;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .header__h1 {
+    font-size: 28px;
+  }
+  .header__p {
+    font-size: 18px;
+  }
+}
+
+.searchbar__nav {
+  background: #191b1b;
+}
+
+.searchbar__nav input {
+  border: #363535;
+  display: flex;
+}
+
+.movies__h1 {
+  text-align: center;
+  text-shadow: 1px 1px #1d1d1d;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(4, 4fr);
+  grid-gap: 40px;
+  margin: 0% 0%;
+}
+
+.movies__element {
+  animation: animateGrid 0.5s;
+}
+
+@keyframes animateGrid {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1356px) {
+  .movies {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 998px) {
+  .movies {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .movies {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .movies {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 /*# sourceMappingURL=Main.css.map */

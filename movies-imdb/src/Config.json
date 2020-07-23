@@ -1,7 +1,6 @@
 {
-    "apiURL": "",
+    "apiURL": "https://api.themoviedb.org/3/",
     "apiKEY": "1f66ce456674bccafd7853304302944c",
-    "imageBaseURL": "https://image.tmdb.org/t/p",
-    "backDropSIZE": "w1280",
-    "posterSIZE": "w500"
+    "imageBaseURL": "http://image.tmdb.org/t/p/",
+    "posterSize": "w200"
 }
