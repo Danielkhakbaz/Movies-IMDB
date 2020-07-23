@@ -45,13 +45,37 @@ class Home extends Component {
         }
         this.fetchItems(endPoint);
     };
+    getAllData = () => {
+        const { movies, searchQuery } = this.state;
+        let searched = movies;
+        if (searchQuery) {
+            window.scrollTo(0, 500);
+        }
+        if (searchQuery) {
+            searched = movies.filter((movie) =>
+                movie.title.toLowerCase().startsWith(searchQuery.toLowerCase())
+            );
+        }
+        return { searched };
+    };
+    handleSearching = (query) => {
+        this.setState({ searchQuery: query });
+    };
     render() {
-        const { searchQuery, movies } = this.state;
+        const { searchQuery } = this.state;
+        const { searched } = this.getAllData();
         return (
             <>
                 <MainPicture />
-                <SearchBar />
-                <Movies searchQuery={searchQuery} movies={movies} image={`${imageBaseURL}${posterSize}`} />
+                <SearchBar
+                    value={searchQuery}
+                    onChange={this.handleSearching}
+                />
+                <Movies
+                    searchQuery={searchQuery}
+                    movies={searched}
+                    image={`${imageBaseURL}${posterSize}`}
+                />
             </>
         );
     }
