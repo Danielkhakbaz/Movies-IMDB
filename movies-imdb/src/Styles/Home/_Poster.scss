@@ -20,32 +20,32 @@
 }
 .Poster__p {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    font-size: 20px;
+    font-size: 1.2rem;
     width: 75%;
     color: rgb(240, 240, 240);
     text-shadow: 1px 1px #1d1d1d;
 }
 @media screen and (min-width: 1023px) and (max-width: 1025px) {
     .Poster__h1 {
-        font-size: 35px;
+        font-size: 2.8rem;
     }
     .Poster__p {
-        font-size: 22px;
+        font-size: 1.2rem;
     }
 }
 @media (max-width: 750px) {
     .Poster__h1 {
-        font-size: 28px;
+        font-size: 1.65rem;
     }
     .Poster__p {
-        font-size: 18px;
+        font-size: 1.1rem;
     }
 }
 @media screen and (min-width: 319px) and (max-width: 321px) {
     .Poster__h1 {
-        font-size: 20px;
+        font-size: 1.2rem;
     }
     .Poster__p {
-        font-size: 15px;
+        font-size: 0.75rem;
     }
 }
