@@ -51,7 +51,7 @@ header img {
 
 .Poster__p {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 20px;
+  font-size: 1.2rem;
   width: 75%;
   color: #f0f0f0;
   text-shadow: 1px 1px #1d1d1d;
@@ -59,28 +59,28 @@ header img {
 
 @media screen and (min-width: 1023px) and (max-width: 1025px) {
   .Poster__h1 {
-    font-size: 35px;
+    font-size: 2.8rem;
   }
   .Poster__p {
-    font-size: 22px;
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 750px) {
   .Poster__h1 {
-    font-size: 28px;
+    font-size: 1.65rem;
   }
   .Poster__p {
-    font-size: 18px;
+    font-size: 1.1rem;
   }
 }
 
 @media screen and (min-width: 319px) and (max-width: 321px) {
   .Poster__h1 {
-    font-size: 20px;
+    font-size: 1.2rem;
   }
   .Poster__p {
-    font-size: 15px;
+    font-size: 0.75rem;
   }
 }
 
@@ -99,6 +99,7 @@ header img {
 }
 
 .Movies__Elements {
+  background-image: radial-gradient(circle, #d3d3d3, #fff);
   display: grid;
   grid-template-columns: repeat(5, 4fr);
   grid-gap: 40px;
@@ -142,7 +143,36 @@ header img {
 
 @media screen and (max-width: 501px) {
   .Movies__Elements {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+footer {
+  height: 11vh;
+  background: linear-gradient(to bottom, white, #d3d3d3);
+  display: flex;
+}
+
+footer img {
+  width: 100%;
+  margin: 10%;
+}
+
+@media screen and (min-width: 1023px) and (max-width: 1025px) {
+  footer img {
+    width: 250%;
+  }
+}
+
+@media screen and (min-width: 410px) and (max-width: 412px) {
+  footer img {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 374px) and (max-width: 376px) {
+  footer img {
+    width: 85%;
   }
 }
 /*# sourceMappingURL=Main.css.map */

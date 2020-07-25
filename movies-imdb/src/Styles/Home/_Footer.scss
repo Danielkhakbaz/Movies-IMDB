@@ -1,0 +1,24 @@
+footer {
+    height: 11vh;
+    background: linear-gradient(to bottom, white, #d3d3d3);
+    display: flex;
+}
+footer img {
+    width: 100%;
+    margin: 10%;
+}
+@media screen and (min-width: 1023px) and (max-width: 1025px) {
+    footer img {
+        width: 250%;
+    }
+}
+@media screen and (min-width: 410px) and (max-width: 412px) {
+    footer img {
+        width: 80%;
+    }
+}
+@media screen and (min-width: 374px) and (max-width: 376px) {
+    footer img {
+        width: 85%;
+    }
+}

@@ -3,6 +3,7 @@
     text-shadow: 1px 1px #1d1d1d;
 }
 .Movies__Elements {
+    background-image: radial-gradient(circle, #d3d3d3, #fff);
     display: grid;
     grid-template-columns: repeat(5, 4fr);
     grid-gap: 40px;
@@ -40,6 +41,6 @@
 }
 @media screen and (max-width: 501px) {
     .Movies__Elements {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
