@@ -1,5 +1,8 @@
+$whiteColor: #ffffff;
+$movies__button--load: #00d35e;
+
 .movies__button button {
-    color: white;
-    background: #00d35e;
+    color: $whiteColor;
+    background: $movies__button--load;
     margin-bottom: 12px;
 }

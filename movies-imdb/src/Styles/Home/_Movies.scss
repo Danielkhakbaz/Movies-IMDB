@@ -1,9 +1,12 @@
+$whiteColor: #ffffff;
+$center: center;
+
 .movies__h1 {
-    text-align: center;
+    text-align: $center;
     text-shadow: 1px 1px #1d1d1d;
 }
 .movies__elements {
-    background-image: radial-gradient(circle, #d3d3d3, #fff);
+    background-image: radial-gradient(circle, #d3d3d3, $whiteColor);
     display: grid;
     grid-template-columns: repeat(5, 4fr);
     grid-gap: 40px;
@@ -11,7 +14,7 @@
 }
 .movies__elements--img {
     animation: AnimateGrid 0.5s;
-    justify-self: center;
+    justify-self: $center;
     border: 1px solid rgb(225, 225, 225);
     box-shadow: 2px 2px 5px #646464;
     border-radius: 5%;
