@@ -3,9 +3,9 @@ import React from "react";
 const Poster = () => {
     return (
         <>
-            <section className="Poster">
-                <h1 className="Poster__h1 m-4">Avengers: Infinity War</h1>
-                <p className="Poster__p m-4">
+            <section className="poster">
+                <h1 className="poster__h1 m-4">Avengers: Infinity War</h1>
+                <p className="poster__p m-4">
                     As the Avengers and their allies have continued to protect
                     the world from threats too large for any one hero to handle,
                     a new danger has emerged from the cosmic shadows: Thanos. A

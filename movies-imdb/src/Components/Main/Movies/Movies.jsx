@@ -4,15 +4,15 @@ const Movies = ({ SearchQuery, Movies, ImageURL }) => {
     console.log(Movies);
     return (
         <>
-            <div className="Movies">
-                <h1 className="Movies__h1 p-4">
-                    {SearchQuery ? "Searched Movies" : "Popular Movies"}
+            <div className="movies">
+                <h1 className="movies__h1 p-4">
+                    {SearchQuery ? "Searched movies" : "Popular movies"}
                 </h1>
-                <div className="Movies__Elements p-2">
+                <div className="movies__elements p-2">
                     {Movies.map((Movie) => (
                         <React.Fragment key={Movie.id}>
                             <img
-                                className="Movies__Elements--img"
+                                className="movies__elements--img"
                                 src={`${ImageURL}${Movie.poster_path}`}
                                 alt="Every Single Movie Pic"
                             />

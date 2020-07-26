@@ -3,7 +3,7 @@ import React from "react";
 const SearchBox = ({ Value, OnChange }) => {
     return (
         <>
-            <nav className="navbar SearchBox">
+            <nav className="navbar searchbox">
                 <input
                     className="form-control m-3"
                     type="search"

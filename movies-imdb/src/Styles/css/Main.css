@@ -32,7 +32,7 @@ header img {
   }
 }
 
-.Poster {
+.poster {
   width: 100%;
   height: 89vh;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.98), rgba(0, 0, 0, 0.4)), url(https://wallpaperstream.com/wallpapers/thumbnails/avengers-infinity-war/Avengers-Infinity-War-Full-Casts-Poster_thumb2x.jpg);
@@ -43,13 +43,13 @@ header img {
   justify-content: space-evenly;
 }
 
-.Poster__h1 {
+.poster__h1 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #f0f0f0;
   text-shadow: 1px 1px #1d1d1d;
 }
 
-.Poster__p {
+.poster__p {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 1.2rem;
   width: 75%;
@@ -58,47 +58,47 @@ header img {
 }
 
 @media screen and (min-width: 1023px) and (max-width: 1025px) {
-  .Poster__h1 {
+  .poster__h1 {
     font-size: 2.8rem;
   }
-  .Poster__p {
+  .poster__p {
     font-size: 1.2rem;
   }
 }
 
 @media (max-width: 750px) {
-  .Poster__h1 {
+  .poster__h1 {
     font-size: 1.65rem;
   }
-  .Poster__p {
+  .poster__p {
     font-size: 1.1rem;
   }
 }
 
 @media screen and (min-width: 319px) and (max-width: 321px) {
-  .Poster__h1 {
+  .poster__h1 {
     font-size: 1.2rem;
   }
-  .Poster__p {
+  .poster__p {
     font-size: 0.75rem;
   }
 }
 
-.SearchBox {
+.searchbox {
   background-image: linear-gradient(to bottom, #66666647, white);
 }
 
-.SearchBox input {
+.searchbox input {
   display: flex;
   box-shadow: 6px 4px 5px #969696;
 }
 
-.Movies__h1 {
+.movies__h1 {
   text-align: center;
   text-shadow: 1px 1px #1d1d1d;
 }
 
-.Movies__Elements {
+.movies__elements {
   background-image: radial-gradient(circle, #d3d3d3, #fff);
   display: grid;
   grid-template-columns: repeat(5, 4fr);
@@ -106,7 +106,7 @@ header img {
   margin-bottom: 20px;
 }
 
-.Movies__Elements--img {
+.movies__elements--img {
   animation: AnimateGrid 0.5s;
   justify-self: center;
   border: 1px solid #e1e1e1;
@@ -125,28 +125,28 @@ header img {
 }
 
 @media screen and (max-width: 1194px) {
-  .Movies__Elements {
+  .movies__elements {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media screen and (max-width: 937px) {
-  .Movies__Elements {
+  .movies__elements {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (max-width: 695px) {
-  .Movies__Elements {
+  .movies__elements {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 501px) {
-  .Movies__Elements {
+  .movies__elements {
     grid-template-columns: repeat(2, 1fr);
   }
-  .Movies__Elements > img {
+  .movies__elements > img {
     width: 90%;
   }
 }

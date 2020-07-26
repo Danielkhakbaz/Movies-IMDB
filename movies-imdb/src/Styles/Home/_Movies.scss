@@ -1,15 +1,15 @@
-.Movies__h1 {
+.movies__h1 {
     text-align: center;
     text-shadow: 1px 1px #1d1d1d;
 }
-.Movies__Elements {
+.movies__elements {
     background-image: radial-gradient(circle, #d3d3d3, #fff);
     display: grid;
     grid-template-columns: repeat(5, 4fr);
     grid-gap: 40px;
     margin-bottom: 20px;
 }
-.Movies__Elements--img {
+.movies__elements--img {
     animation: AnimateGrid 0.5s;
     justify-self: center;
     border: 1px solid rgb(225, 225, 225);
@@ -26,25 +26,25 @@
     }
 }
 @media screen and (max-width: 1194px) {
-    .Movies__Elements {
+    .movies__elements {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 @media screen and (max-width: 937px) {
-    .Movies__Elements {
+    .movies__elements {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 @media screen and (max-width: 695px) {
-    .Movies__Elements {
+    .movies__elements {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 @media screen and (max-width: 501px) {
-    .Movies__Elements {
+    .movies__elements {
         grid-template-columns: repeat(2, 1fr);
     }
-    .Movies__Elements > img {
+    .movies__elements > img {
         width: 90%;
     }
 }
