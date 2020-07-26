@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Poster from "../Poster/Poster";
 import SearchBox from "../../Common/SearchBox/SearchBox";
 import Movies from "../../Main/Movies/Movies";
+import LoadButton from "../../Common/LoadButton/LoadButton";
 import { apiURL, apiKey, imageBaseURL, posterSize } from "../../../Config.json";
 import axios from "axios";
 
@@ -9,21 +10,20 @@ class Home extends Component {
     state = {
         movies: [],
         searchQuery: "",
+        currentPage: 1,
     };
     async componentDidMount() {
-        for (let i = 1; i <= 4; i++) {
-            if (i !== 2) {
-                let { data } = await axios.get(
-                    `${apiURL}movie/popular?api_key=${apiKey}&language=en-US&page=${i}`
-                );
-                this.setState({
-                    movies: [...this.state.movies, ...data.results],
-                });
-            }
-        }
+        const { currentPage } = this.state;
+        let { data } = await axios.get(
+            `${apiURL}movie/popular?api_key=${apiKey}&language=en-US&page=${currentPage}`
+        );
+        this.setState({
+            movies: [...data.results],
+            currentPage: Number(currentPage + 2),
+        });
     }
     render() {
-        const { searchQuery } = this.state;
+        const { searchQuery, currentPage } = this.state;
         const { searched } = this.searchEngine();
         return (
             <>
@@ -36,6 +36,10 @@ class Home extends Component {
                     searchQuery={searchQuery}
                     movies={searched}
                     imageURL={`${imageBaseURL}${posterSize}`}
+                />
+                <LoadButton
+                    currentPage={currentPage}
+                    onLoadButton={this.handleLoadButton}
                 />
             </>
         );
@@ -53,6 +57,16 @@ class Home extends Component {
     };
     handleSearching = (query) => {
         this.setState({ searchQuery: query });
+    };
+    handleLoadButton = async () => {
+        const { currentPage } = this.state;
+        let { data } = await axios.get(
+            `${apiURL}movie/popular?api_key=${apiKey}&language=en-US&page=${currentPage}`
+        );
+        this.setState({
+            movies: [...this.state.movies, ...data.results],
+            currentPage: Number(currentPage + 1),
+        });
     };
 }
 

@@ -151,6 +151,12 @@ header img {
   }
 }
 
+.movies__button button {
+  color: white;
+  background: #00d35e;
+  margin-bottom: 12px;
+}
+
 footer {
   background: #2b2b2b;
   display: flex;
