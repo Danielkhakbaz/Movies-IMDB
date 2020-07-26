@@ -7,6 +7,7 @@
     display: grid;
     grid-template-columns: repeat(5, 4fr);
     grid-gap: 40px;
+    margin-bottom: 20px;
 }
 .Movies__Elements--img {
     animation: AnimateGrid 0.5s;
@@ -24,7 +25,7 @@
         opacity: 1;
     }
 }
-@media screen and (max-width: 1177px) {
+@media screen and (max-width: 1194px) {
     .Movies__Elements {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -42,5 +43,8 @@
 @media screen and (max-width: 501px) {
     .Movies__Elements {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .Movies__Elements > img {
+        width: 90%;
     }
 }

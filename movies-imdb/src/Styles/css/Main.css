@@ -103,6 +103,7 @@ header img {
   display: grid;
   grid-template-columns: repeat(5, 4fr);
   grid-gap: 40px;
+  margin-bottom: 20px;
 }
 
 .Movies__Elements--img {
@@ -123,7 +124,7 @@ header img {
   }
 }
 
-@media screen and (max-width: 1177px) {
+@media screen and (max-width: 1194px) {
   .Movies__Elements {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -145,34 +146,82 @@ header img {
   .Movies__Elements {
     grid-template-columns: repeat(2, 1fr);
   }
+  .Movies__Elements > img {
+    width: 90%;
+  }
 }
 
 footer {
-  height: 11vh;
-  background: linear-gradient(to bottom, white, #d3d3d3);
+  background: #2b2b2b;
   display: flex;
 }
 
-footer img {
-  width: 100%;
-  margin: 10%;
+.footer__links {
+  justify-content: center;
+  border-bottom: 1px solid #545454;
 }
 
-@media screen and (min-width: 1023px) and (max-width: 1025px) {
-  footer img {
-    width: 250%;
-  }
+.footer__links a {
+  padding: 15px;
 }
 
-@media screen and (min-width: 410px) and (max-width: 412px) {
-  footer img {
-    width: 80%;
-  }
+.footer__links a[name="instagram"] {
+  color: #e1306c;
 }
 
-@media screen and (min-width: 374px) and (max-width: 376px) {
-  footer img {
-    width: 85%;
-  }
+.footer__links a[name="instagram"]:hover {
+  color: #fff;
+  transition: 0.5s;
+}
+
+.footer__links a[name="twitter"] {
+  color: #00acee;
+}
+
+.footer__links a[name="twitter"]:hover {
+  color: #fff;
+  transition: 0.5s;
+}
+
+.footer__links a[name="telegram"] {
+  color: #0088cc;
+}
+
+.footer__links a[name="telegram"]:hover {
+  color: #fff;
+  transition: 0.5s;
+}
+
+.footer__links a[name="mail"] {
+  color: #dc483c;
+}
+
+.footer__links a[name="mail"]:hover {
+  color: #fff;
+  transition: 0.5s;
+}
+
+.footer__links a[name="linkedin"] {
+  color: #0e76a8;
+}
+
+.footer__links a[name="linkedin"]:hover {
+  color: #fff;
+  transition: 0.5s;
+}
+
+.footer__links a[name="github"] {
+  color: #484646;
+}
+
+.footer__links a[name="github"]:hover {
+  color: #fff;
+  transition: 0.5s;
+}
+
+.footer__h4 {
+  color: #646464;
+  justify-content: center;
+  padding: 8px;
 }
 /*# sourceMappingURL=Main.css.map */
