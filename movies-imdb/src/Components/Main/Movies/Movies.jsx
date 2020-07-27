@@ -2,7 +2,6 @@ import React from "react";
 import NoImageAvailable from "../../../Assets/Images/NoImageAvailable.jpg";
 
 const Movies = ({ searchQuery, movies, imageURL }) => {
-    console.log(movies);
     return (
         <>
             <div className="movies">
