@@ -69,9 +69,9 @@ class Home extends Component {
         );
         this.setState({
             movies: [...this.state.movies, ...data.results],
-            currentPage: Number(currentPage + 1),
+            currentPage: currentPage + 1,
+            isLoading: false,
         });
-        this.setState({ isLoading: false });
     };
 }
 

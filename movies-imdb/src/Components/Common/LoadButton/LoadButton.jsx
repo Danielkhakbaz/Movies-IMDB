@@ -3,7 +3,11 @@ import Spinner from "../Spinner/Spinner";
 
 const LoadButton = ({ currentPage, searchQuery, isLoading, onLoadButton }) => {
     if (isLoading) {
-        return <Spinner />;
+        return (
+            <>
+                <Spinner />
+            </>
+        );
     }
     if (currentPage <= 4 && !searchQuery) {
         return (
@@ -25,6 +29,7 @@ const LoadButton = ({ currentPage, searchQuery, isLoading, onLoadButton }) => {
             </>
         );
     }
+    return null;
 };
 
 export default LoadButton;
