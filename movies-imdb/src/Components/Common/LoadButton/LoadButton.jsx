@@ -9,7 +9,7 @@ const LoadButton = ({ currentPage, searchQuery, isLoading, onLoadButton }) => {
             </>
         );
     }
-    if (currentPage <= 4 && !searchQuery) {
+    if (currentPage <= 6 && !searchQuery) {
         return (
             <>
                 <div className="container-fluid">
