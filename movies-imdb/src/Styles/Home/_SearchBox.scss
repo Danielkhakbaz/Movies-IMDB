@@ -1,5 +1,7 @@
+$whiteColor: #ffffff;
+
 .searchbox {
-    background-image: linear-gradient(to bottom, #66666647, white);
+    background-image: linear-gradient(to bottom, #66666647, $whiteColor);
 }
 .searchbox input {
     display: flex;

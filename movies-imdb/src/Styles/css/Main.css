@@ -51,10 +51,10 @@ header img {
 
 .poster__p {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 1.2rem;
-  width: 75%;
   color: #f0f0f0;
   text-shadow: 1px 1px #1d1d1d;
+  font-size: 1.2rem;
+  width: 75%;
 }
 
 @media screen and (min-width: 1023px) and (max-width: 1025px) {
@@ -85,7 +85,7 @@ header img {
 }
 
 .searchbox {
-  background-image: linear-gradient(to bottom, #66666647, white);
+  background-image: linear-gradient(to bottom, #66666647, #ffffff);
 }
 
 .searchbox input {
@@ -99,7 +99,7 @@ header img {
 }
 
 .movies__elements {
-  background-image: radial-gradient(circle, #d3d3d3, #fff);
+  background-image: radial-gradient(circle, #d3d3d3, #ffffff);
   display: grid;
   grid-template-columns: repeat(5, 4fr);
   grid-gap: 40px;
@@ -152,9 +152,28 @@ header img {
 }
 
 .movies__button button {
-  color: white;
-  background: #00d35e;
+  color: #ffffff;
+  background: #16d47b;
   margin-bottom: 12px;
+}
+
+.loading__button {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #16d47b;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spinningButton 0.8s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spinningButton {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 footer {

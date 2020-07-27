@@ -11,6 +11,7 @@ class Home extends Component {
         movies: [],
         searchQuery: "",
         currentPage: 1,
+        isLoading: false,
     };
     async componentDidMount() {
         const { currentPage } = this.state;
@@ -23,7 +24,7 @@ class Home extends Component {
         });
     }
     render() {
-        const { searchQuery, currentPage } = this.state;
+        const { searchQuery, currentPage, isLoading } = this.state;
         const { searched } = this.searchEngine();
         return (
             <>
@@ -40,6 +41,7 @@ class Home extends Component {
                 <LoadButton
                     currentPage={currentPage}
                     searchQuery={searchQuery}
+                    isLoading={isLoading}
                     onLoadButton={this.handleLoadButton}
                 />
             </>
@@ -61,6 +63,7 @@ class Home extends Component {
     };
     handleLoadButton = async () => {
         const { currentPage } = this.state;
+        this.setState({ isLoading: true });
         let { data } = await axios.get(
             `${apiURL}movie/popular?api_key=${apiKey}&language=en-US&page=${currentPage}`
         );
@@ -68,6 +71,7 @@ class Home extends Component {
             movies: [...this.state.movies, ...data.results],
             currentPage: Number(currentPage + 1),
         });
+        this.setState({ isLoading: false });
     };
 }
 
