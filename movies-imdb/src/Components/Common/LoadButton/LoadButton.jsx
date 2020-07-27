@@ -1,7 +1,7 @@
 import React from "react";
 import Spinner from "../Spinner/Spinner";
 
-const LoadButton = ({ currentPage, searchQuery, isLoading, onLoadButton }) => {
+const LoadButton = ({ searchQuery, isLoading, onLoadButton }) => {
     if (isLoading) {
         return (
             <>
@@ -9,7 +9,7 @@ const LoadButton = ({ currentPage, searchQuery, isLoading, onLoadButton }) => {
             </>
         );
     }
-    if (currentPage <= 10 && !searchQuery) {
+    if (!searchQuery) {
         return (
             <>
                 <div className="container-fluid">

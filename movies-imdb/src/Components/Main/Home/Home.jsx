@@ -39,7 +39,6 @@ class Home extends Component {
                     imageURL={`${imageBaseURL}${posterSize}`}
                 />
                 <LoadButton
-                    currentPage={currentPage}
                     searchQuery={searchQuery}
                     isLoading={isLoading}
                     onLoadButton={this.handleLoadButton}
