@@ -1,7 +1,7 @@
 import React from "react";
 
-const LoadButton = ({ currentPage, onLoadButton }) => {
-    if (currentPage <= 4) {
+const LoadButton = ({ currentPage, searchQuery, onLoadButton }) => {
+    if (currentPage <= 4 && !searchQuery) {
         return (
             <>
                 <div className="container-fluid">

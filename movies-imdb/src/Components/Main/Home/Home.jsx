@@ -39,6 +39,7 @@ class Home extends Component {
                 />
                 <LoadButton
                     currentPage={currentPage}
+                    searchQuery={searchQuery}
                     onLoadButton={this.handleLoadButton}
                 />
             </>
