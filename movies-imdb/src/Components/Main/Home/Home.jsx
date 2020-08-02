@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import Poster from "../Poster/Poster";
+import Sort from "../../Common/Sort/Sort";
 import SearchBox from "../../Common/SearchBox/SearchBox";
 import Movies from "../../Main/Movies/Movies";
 import LoadButton from "../../Common/LoadButton/LoadButton";
 import { apiURL, apiKey, imageBaseURL, posterSize } from "../../../Config.json";
 import axios from "axios";
+import _ from "lodash";
 
 class Home extends Component {
     state = {
@@ -12,6 +14,7 @@ class Home extends Component {
         searchQuery: "",
         currentPage: 1,
         isLoading: false,
+        sortColumn: { path: "title", order: "asc" },
     };
     async componentDidMount() {
         const { currentPage } = this.state;
@@ -24,18 +27,20 @@ class Home extends Component {
         });
     }
     render() {
-        const { searchQuery, isLoading } = this.state;
+        const { searchQuery, isLoading, sortColumn } = this.state;
         const { searched } = this.searchEngine();
+        const sorted = _.orderBy(searched, sortColumn.path, sortColumn.order);
         return (
             <>
                 <Poster />
+                <Sort sortColumn={sortColumn} onSort={this.handleSorting} />
                 <SearchBox
                     value={searchQuery}
                     onChange={this.handleSearching}
                 />
                 <Movies
                     searchQuery={searchQuery}
-                    movies={searched}
+                    movies={sorted}
                     imageURL={`${imageBaseURL}${posterSize}`}
                 />
                 <LoadButton
@@ -71,6 +76,9 @@ class Home extends Component {
             currentPage: currentPage + 1,
             isLoading: false,
         });
+    };
+    handleSorting = (sortColumn) => {
+        this.setState({ sortColumn });
     };
 }
 
