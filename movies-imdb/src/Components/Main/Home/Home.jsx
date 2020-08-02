@@ -24,7 +24,7 @@ class Home extends Component {
         });
     }
     render() {
-        const { searchQuery, currentPage, isLoading } = this.state;
+        const { searchQuery, isLoading } = this.state;
         const { searched } = this.searchEngine();
         return (
             <>

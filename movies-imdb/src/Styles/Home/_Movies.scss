@@ -10,6 +10,7 @@ $center: center;
     display: grid;
     grid-template-columns: repeat(5, 4fr);
     grid-gap: 40px;
+    justify-items: center;
     margin-bottom: 20px;
 }
 .movies__elements--img {
