@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Poster from "../Poster/Poster";
+import Poster from "./Poster/Poster";
 import Sort from "../../Common/Sort/Sort";
 import SearchBox from "../../Common/SearchBox/SearchBox";
-import Movies from "../../Main/Movies/Movies";
+import Movies from "./Movies/Movies";
 import LoadButton from "../../Common/LoadButton/LoadButton";
 import {
     apiURL,

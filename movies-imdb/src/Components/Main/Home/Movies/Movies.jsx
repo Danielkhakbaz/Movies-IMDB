@@ -1,5 +1,5 @@
 import React from "react";
-import NoImageAvailable from "../../../Assets/Images/NoImageAvailable.jpg";
+import NoImageAvailable from "../../../../Assets/Images/NoImageAvailable.jpg";
 import { Link } from "react-router-dom";
 
 const Movies = ({ searchQuery, movies, imageURL }) => {
