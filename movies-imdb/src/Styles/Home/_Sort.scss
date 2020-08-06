@@ -12,4 +12,11 @@
     padding: 3px;
     border: 1px solid black;
     border-radius: 4px;
+    &:hover {
+        transform: translate(0px, -5px);
+        transition: ease-out 0.5s;
+    }
+    &:active {
+        background: rgb(199, 199, 199);
+    }
 }

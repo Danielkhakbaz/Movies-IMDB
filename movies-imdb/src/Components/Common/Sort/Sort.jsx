@@ -19,10 +19,10 @@ const Sort = ({ sortColumn, onSort }) => {
                 titleIcon += "-alt";
             }
         }
-        let popularityIcon = "fas fa-sort-amount-down";
+        let popularityIcon = "fas fa-sort-amount-down-alt";
         if (sortColumn.path === "popularity") {
             if (sortColumn.order === "desc") {
-                popularityIcon += "-alt";
+                popularityIcon = "fas fa-sort-amount-down";
             }
         }
         let voteAverageIcon = "fas fa-sort-numeric-down";
