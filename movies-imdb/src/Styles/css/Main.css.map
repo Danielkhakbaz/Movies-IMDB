@@ -4,7 +4,7 @@
     "sources": [
         "../Main.scss",
         "../_Header.scss",
-        "../_Home.scss",
+        "../Home/_Home.scss",
         "../Home/_Poster.scss",
         "../Home/_Sort.scss",
         "../Home/_SearchBox.scss",
