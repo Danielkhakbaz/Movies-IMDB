@@ -85,13 +85,13 @@ header img {
 }
 
 .sort {
+  background: linear-gradient(to bottom, #ffffff, #66666647);
   display: flex;
-  background: linear-gradient(to bottom, #fff, #66666647);
 }
 
 .sort {
-  margin-top: 1.2rem;
   justify-content: center;
+  margin-top: 1.2rem;
 }
 
 .sort i {
