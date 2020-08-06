@@ -4,7 +4,12 @@ import Sort from "../../Common/Sort/Sort";
 import SearchBox from "../../Common/SearchBox/SearchBox";
 import Movies from "../../Main/Movies/Movies";
 import LoadButton from "../../Common/LoadButton/LoadButton";
-import { apiURL, apiKey, imageBaseURL, posterSize } from "../../../Config.json";
+import {
+    apiURL,
+    apiKey,
+    imageBaseURL,
+    posterSize,
+} from "../../../Services/Config.json";
 import axios from "axios";
 import _ from "lodash";
 
