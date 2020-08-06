@@ -31,10 +31,10 @@ const Sort = ({ sortColumn, onSort }) => {
                 voteAverageIcon += "-alt";
             }
         }
-
         return { titleIcon, popularityIcon, voteAverageIcon };
     };
     const { titleIcon, popularityIcon, voteAverageIcon } = handleIcons();
+
     return (
         <>
             <div className="container-fluid">

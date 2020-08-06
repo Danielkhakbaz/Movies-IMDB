@@ -21,6 +21,7 @@ class Home extends Component {
         isLoading: false,
         sortColumn: { path: "title", order: "asc" },
     };
+
     async componentDidMount() {
         const { currentPage } = this.state;
         let { data } = await axios.get(
@@ -31,6 +32,7 @@ class Home extends Component {
             currentPage: Number(currentPage + 2),
         });
     }
+
     render() {
         const { searchQuery, isLoading, sortColumn } = this.state;
         const { searched } = this.searchEngine();
@@ -56,6 +58,7 @@ class Home extends Component {
             </>
         );
     }
+
     searchEngine = () => {
         const { movies, searchQuery } = this.state;
         let searched = movies;

@@ -29,6 +29,7 @@ const LoadButton = ({ searchQuery, isLoading, onLoadButton }) => {
             </>
         );
     }
+
     return null;
 };
 
