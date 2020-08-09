@@ -204,6 +204,42 @@ header img {
   }
 }
 
+.navigation {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background: #6d6d6d;
+  padding: 6px 0;
+}
+
+.navigation__link {
+  font-size: 17px;
+  color: #2c2c2c;
+}
+
+.navigation__span {
+  font-size: 16px;
+  color: white;
+}
+
+.movie {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-size: cover !important;
+  background-position: center !important;
+  height: 70vh;
+  width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  animation: animateMovieinfo 1s;
+}
+
+@keyframes animateMovieinfo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 footer {
   background: #2b2b2b;
   display: flex;

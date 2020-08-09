@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Navigation from "./Navigation/Navigation";
+import Movie from "./Movie/Movie";
 import { apiURL, apiKey } from "../../../Services/Config.json";
 
 class MoviePage extends Component {
@@ -33,13 +34,16 @@ class MoviePage extends Component {
                             actors: people.cast,
                         });
                     });
-            });
+            })
+            .catch((error) => console.error("Error", error));
     };
     render() {
+        const { movie, director, actors } = this.state;
         return (
             <>
-                <div className="container-fluid">
-                    <Navigation />
+                <div>
+                    <Navigation movieName={movie.original_title} />
+                    <Movie movie={movie} director={director} actors={actors} />
                 </div>
             </>
         );
