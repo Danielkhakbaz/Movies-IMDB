@@ -8,6 +8,7 @@ const Movie = ({ movie, directors, actors }) => {
             return backgroundPoster;
         }
     };
+
     const backgroundPoster = getBackgroundPoster();
     return (
         <>
