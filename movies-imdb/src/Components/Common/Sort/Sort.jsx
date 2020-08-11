@@ -41,7 +41,7 @@ const Sort = ({ sortColumn, onSort }) => {
         <>
             <div className="container-fluid">
                 <div className="row">
-                    <div className="sort col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div className="sorting col-lg-12 col-md-12 col-sm-12 col-12">
                         {sorts.map((sort) => (
                             <button
                                 className={sort.className}
@@ -57,7 +57,8 @@ const Sort = ({ sortColumn, onSort }) => {
                                     }
                                 />
                                 <h6>
-                                    {sortColumn.path === sort.path && sortColumn.order === "asc"
+                                    {sortColumn.path === sort.path &&
+                                    sortColumn.order === "asc"
                                         ? sort.labelAsc
                                         : sort.labelDesc}
                                 </h6>

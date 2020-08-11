@@ -38,17 +38,17 @@ header img {
   text-shadow: 1px 1px #1d1d1d;
 }
 
-.sort {
+.sorting {
   background: linear-gradient(to bottom, #ffffff, #66666647);
   display: flex;
 }
 
-.sort {
+.sorting {
   justify-content: center;
   margin-top: 1.2rem;
 }
 
-.sort i {
+.sorting i {
   font-size: 1.5rem;
   margin: 6px;
   padding: 3px;
@@ -56,12 +56,12 @@ header img {
   border-radius: 4px;
 }
 
-.sort i:hover {
+.sorting i:hover {
   transform: translate(0px, -5px);
   transition: ease-out 0.5s;
 }
 
-.sort i:active {
+.sorting i:active {
   background: #c7c7c7;
 }
 
