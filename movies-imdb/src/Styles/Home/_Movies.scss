@@ -13,6 +13,19 @@ $center: center;
     justify-items: center;
     margin-bottom: 20px;
 }
+.movies__elements1 {
+    display: grid;
+    grid-template-columns: repeat(4, 4fr);
+    grid-gap: 40px;
+    background-image: radial-gradient(circle, #d3d3d3, $whiteColor);
+    justify-items: center;
+    margin-bottom: 20px;
+}
+.movie-actor {
+    display: flex;
+    flex-shrink: 2;
+    background: gray;
+}
 .movies__elements--img {
     animation: AnimateGrid 0.5s;
     justify-self: $center;

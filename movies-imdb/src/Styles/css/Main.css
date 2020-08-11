@@ -134,6 +134,21 @@ header img {
   margin-bottom: 20px;
 }
 
+.movies__elements1 {
+  display: grid;
+  grid-template-columns: repeat(4, 4fr);
+  grid-gap: 40px;
+  background-image: radial-gradient(circle, #d3d3d3, #ffffff);
+  justify-items: center;
+  margin-bottom: 20px;
+}
+
+.movie-actor {
+  display: flex;
+  flex-shrink: 2;
+  background: gray;
+}
+
 .movies__elements--img {
   animation: AnimateGrid 0.5s;
   justify-self: center;
@@ -221,11 +236,9 @@ header img {
 }
 
 .movie {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   background-size: cover !important;
   background-position: center !important;
-  height: 70vh;
-  width: 100%;
+  height: 60vh;
   padding: 40px 20px;
   box-sizing: border-box;
   animation: animateMovieinfo 1s;
@@ -238,6 +251,19 @@ header img {
   to {
     opacity: 1;
   }
+}
+
+.movie__content {
+  display: flex;
+  justify-content: flex-start;
+  justify-self: center;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.movie__content img {
+  float: left;
 }
 
 footer {

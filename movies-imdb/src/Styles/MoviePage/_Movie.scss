@@ -1,14 +1,11 @@
 .movie {
-    
     background-size: cover !important;
     background-position: center !important;
-    height: 70vh;
-    width: 100%;
+    height: 60vh;
     padding: 40px 20px;
     box-sizing: border-box;
     animation: animateMovieinfo 1s;
 }
-
 @keyframes animateMovieinfo {
     from {
         opacity: 0;
@@ -16,4 +13,15 @@
     to {
         opacity: 1;
     }
+}
+.movie__content {
+    display: flex;
+    justify-content: flex-start;
+    justify-self: center;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    margin: 0 auto;
+}
+.movie__content img {
+    float: left;
 }
