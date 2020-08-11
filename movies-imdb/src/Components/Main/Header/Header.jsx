@@ -7,14 +7,12 @@ const Header = () => {
         <>
             <header className="container-fluid">
                 <div className="row">
-                    <div className="col-lg-1 col-md-2 col-sm-3 col-4">
-                        <Link to="/Movies">
-                            <img
-                                src={HeaderImage}
-                                alt="Header's Pic which(Website Logo)."
-                            />
-                        </Link>
-                    </div>
+                    <Link to="/Movies">
+                        <img
+                            src={HeaderImage}
+                            alt="Website Logo which is Movie Night."
+                        />
+                    </Link>
                 </div>
             </header>
         </>
