@@ -3,7 +3,6 @@ import { imageBaseURL } from "../../../../Services/Config.json";
 import NoImageAvailable from "../../../../Assets/Images/NoImageAvailable.jpg";
 
 const Actors = ({ actors }) => {
-    console.log(actors);
     const posterSize = "w154";
     return (
         <>
@@ -21,9 +20,7 @@ const Actors = ({ actors }) => {
                             }
                             alt="Every Single Movie Pic"
                         />
-                        <h6>
-                            {actor.name}
-                        </h6>
+                        <h6>{actor.name}</h6>
                         <h6>{actor.character}</h6>
                     </div>
                 ))}

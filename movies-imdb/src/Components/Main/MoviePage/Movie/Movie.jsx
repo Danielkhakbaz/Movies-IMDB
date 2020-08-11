@@ -7,7 +7,6 @@ import {
 import HeaderImage from "../../../../Assets/Images/Header-Movies-Image.jpg";
 
 const Movie = ({ movie, director, actors }) => {
-    console.log(movie);
     const getBackgroundPoster = () => {
         if (movie.backdrop_path !== undefined) {
             const backgroundPoster = `${imageBaseURL}${backdropSize}${movie.backdrop_path}`;
