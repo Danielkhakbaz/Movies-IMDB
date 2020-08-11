@@ -19,7 +19,7 @@ class Home extends Component {
         searchQuery: "",
         currentPage: 1,
         isLoading: false,
-        sortColumn: { path: "", order: "asc" },
+        sortColumn: { path: "title", order: "asc" },
     };
 
     async componentDidMount() {
