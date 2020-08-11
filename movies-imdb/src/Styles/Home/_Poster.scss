@@ -19,35 +19,10 @@
     flex-direction: column;
     justify-content: space-evenly;
 }
-.poster__h1 {
+.poster__title {
     @include posterText();
 }
-.poster__p {
+.poster__overview {
+    width: 80%;
     @include posterText();
-    font-size: 1.2rem;
-    width: 75%;
-}
-@media screen and (min-width: 1023px) and (max-width: 1025px) {
-    .poster__h1 {
-        font-size: 2.8rem;
-    }
-    .poster__p {
-        font-size: 1.2rem;
-    }
-}
-@media (max-width: 750px) {
-    .poster__h1 {
-        font-size: 1.65rem;
-    }
-    .poster__p {
-        font-size: 1.1rem;
-    }
-}
-@media screen and (min-width: 319px) and (max-width: 321px) {
-    .poster__h1 {
-        font-size: 1.2rem;
-    }
-    .poster__p {
-        font-size: 0.75rem;
-    }
 }
