@@ -3,6 +3,7 @@ import React from "react";
 const Footer = () => {
     return (
         <>
+        
             <footer className="container-fluid">
                 <div className="footer__links row p-2">
                     <a
