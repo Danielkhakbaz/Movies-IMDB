@@ -1,5 +1,8 @@
 import React from "react";
-import { calcTime, convertMoney } from "./../../../../Services/Convertor";
+import {
+    calcTime,
+    convertMoney,
+} from "./../../../../Services/Convertor/Convertor";
 
 const Budget = ({ movie }) => {
     return (

@@ -3,7 +3,7 @@ import {
     imageBaseURL,
     backdropSize,
     posterSize,
-} from "../../../../Services/Config.json";
+} from "../../../../Services/API/Config.json";
 import HeaderImage from "../../../../Assets/Images/Header-Movies-Image.jpg";
 
 const Movie = ({ movie, director, actors }) => {

@@ -9,7 +9,7 @@ import {
     apiKey,
     imageBaseURL,
     posterSize,
-} from "../../../Services/Config.json";
+} from "../../../Services/API/Config.json";
 import axios from "axios";
 import _ from "lodash";
 

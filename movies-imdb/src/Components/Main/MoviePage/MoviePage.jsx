@@ -3,7 +3,7 @@ import Navigation from "./Navigation/Navigation";
 import Movie from "./Movie/Movie";
 import Budget from "./Budget/Budget";
 import Actors from "./Actors/Actors";
-import { apiURL, apiKey } from "../../../Services/Config.json";
+import { apiURL, apiKey } from "../../../Services/API/Config.json";
 
 class MoviePage extends Component {
     state = {

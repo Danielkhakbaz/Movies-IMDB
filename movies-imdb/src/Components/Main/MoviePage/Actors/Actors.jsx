@@ -1,5 +1,5 @@
 import React from "react";
-import { imageBaseURL } from "../../../../Services/Config.json";
+import { imageBaseURL } from "../../../../Services/API/Config.json";
 import NoImageAvailable from "../../../../Assets/Images/NoImageAvailable.jpg";
 
 const Actors = ({ actors }) => {
