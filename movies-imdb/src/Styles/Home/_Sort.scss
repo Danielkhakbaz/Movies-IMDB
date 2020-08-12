@@ -3,8 +3,6 @@ $whiteColor: #ffffff;
 .sorting {
     background: linear-gradient(to bottom, $whiteColor, #66666647);
     display: flex;
-}
-.sorting {
     justify-content: center;
     margin-top: 1.2rem;
 }
@@ -17,8 +15,5 @@ $whiteColor: #ffffff;
     &:hover {
         transform: translate(0px, -5px);
         transition: ease-out 0.5s;
-    }
-    &:active {
-        background: rgb(199, 199, 199);
     }
 }
