@@ -72,7 +72,7 @@ const Sort = ({ sortColumn, onSort }) => {
                                             : sort.classNameIconDesc
                                     }
                                 />
-                                <h6>
+                                <h6 className="sorting__title">
                                     {sortColumn.path === sort.path &&
                                     sortColumn.order === "asc"
                                         ? sort.labelAsc
