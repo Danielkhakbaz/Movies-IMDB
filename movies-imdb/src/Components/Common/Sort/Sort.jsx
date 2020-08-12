@@ -3,12 +3,27 @@ import React from "react";
 const Sort = ({ sortColumn, onSort }) => {
     const sorts = [
         {
+            path: "",
+            labelAsc: "Default",
+            labelDesc: "Default",
+            className: "btn btn-info m-2",
+            classNameIconDesc: "fas fa-redo",
+        },
+        {
             path: "title",
             labelAsc: "A to Z",
             labelDesc: "Z to A",
             className: "btn btn-warning m-2",
             classNameIconAsc: "fas fa-sort-alpha-down",
             classNameIconDesc: "fas fa-sort-alpha-down-alt",
+        },
+        {
+            path: "release_date",
+            labelAsc: "Oldest",
+            labelDesc: "Newest",
+            className: "btn btn-primary m-2",
+            classNameIconAsc: "fas fa-calendar-minus",
+            classNameIconDesc: "fas fa-calendar-plus",
         },
         {
             path: "popularity",
@@ -50,6 +65,7 @@ const Sort = ({ sortColumn, onSort }) => {
                             >
                                 <i
                                     className={
+                                        sort.path !== "" &&
                                         sortColumn.path === sort.path &&
                                         sortColumn.order === "asc"
                                             ? sort.classNameIconAsc
