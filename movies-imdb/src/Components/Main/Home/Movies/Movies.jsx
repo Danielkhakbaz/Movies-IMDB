@@ -1,19 +1,19 @@
 import React from "react";
-import NoImageAvailable from "../../../../Assets/Images/NoImageAvailable.jpg";
 import { Link } from "react-router-dom";
+import NoImageAvailable from "../../../../Assets/Images/NoImageAvailable.jpg";
 
 const Movies = ({ searchQuery, movies, imageURL }) => {
     return (
         <>
             <div className="movies">
-                <h1 className="movies__h1 p-4">
-                    {searchQuery ? "Searched movies" : "Popular movies"}
+                <h1 className="movies__title p-4">
+                    {searchQuery ? "Searched Movies" : "Popular Movies"}
                 </h1>
                 <div className="movies__elements p-2">
                     {movies.map((movie) => (
                         <React.Fragment key={movie.id}>
                             <Link to={`/Movies/${movie.id}`}>
-                                {movie.poster_path !== null ? (
+                                {movie.poster_path ? (
                                     <img
                                         className="movies__elements--img"
                                         src={`${imageURL}${movie.poster_path}`}
