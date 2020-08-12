@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import HeaderImage from "../../../Assets/Images/Header-Movies-Image.jpg";
 
 const Header = () => {
-    
     return (
         <>
             <header className="container-fluid">
