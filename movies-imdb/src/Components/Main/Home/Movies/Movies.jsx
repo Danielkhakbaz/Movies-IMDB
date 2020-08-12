@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import NoImageAvailable from "../../../../Assets/Images/NoImageAvailable.jpg";
+import PropTypes from "prop-types";
 
 const Movies = ({ searchQuery, movies, imageURL }) => {
     return (
@@ -34,6 +35,12 @@ const Movies = ({ searchQuery, movies, imageURL }) => {
             </div>
         </>
     );
+};
+
+Movies.propTypes = {
+    searchQuery: PropTypes.string.isRequired,
+    movies: PropTypes.array.isRequired,
+    imageURL: PropTypes.string.isRequired,
 };
 
 export default Movies;
