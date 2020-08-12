@@ -12,7 +12,7 @@ const Movies = ({ searchQuery, movies, imageURL }) => {
                 </h1>
                 <div className="movies__elements p-2">
                     {movies.map((movie) => (
-                        <div key={movie.id}>
+                        <div className="movies__element" key={movie.id}>
                             <Link to={`/Movies/${movie.id}`}>
                                 {movie.poster_path ? (
                                     <img
