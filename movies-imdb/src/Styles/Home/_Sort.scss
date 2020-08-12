@@ -6,14 +6,16 @@ $whiteColor: #ffffff;
     justify-content: center;
     margin-top: 1.2rem;
 }
+.sorting__button {
+    &:hover :nth-child(1) {
+        transform: translate(0px, -5px);
+        transition: ease-out 0.5s;
+    }
+}
 .sorting i {
     font-size: 1.5rem;
     margin: 6px;
     padding: 3px;
     border: 1px solid black;
     border-radius: 4px;
-    &:hover {
-        transform: translate(0px, -5px);
-        transition: ease-out 0.5s;
-    }
 }
