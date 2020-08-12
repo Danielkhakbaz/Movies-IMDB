@@ -23,6 +23,7 @@ const Movies = ({ searchQuery, movies, imageURL }) => {
                                 ) : (
                                     <img
                                         className="movies__elements--img"
+                                        width="203"
                                         src={NoImageAvailable}
                                         alt="No Available Pic"
                                     />
