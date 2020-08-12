@@ -52,28 +52,31 @@ $center: center;
     .movies__elements {
         grid-template-columns: repeat(2, 1fr);
     }
+    .movies__elements--img {
+        width: 160px;
+    }
 }
 @media screen and (max-width: 501px) {
-    .movies__elements {
-        grid-template-columns: repeat(2, 1fr);
-    }
     .movies__elements > img {
         width: 90%;
+    }
+    .movies__elements--img {
+        width: 160px;
     }
 }
 
 ////// Movie Component
 
-.movies__elements1 {
-    background-image: radial-gradient(circle, #d3d3d3, $whiteColor);
-    display: grid;
-    grid-template-columns: repeat(4, 4fr);
-    grid-gap: 40px;
-    justify-items: center;
-    margin-bottom: 20px;
-}
-.movie-actor {
-    background: gray;
-    display: flex;
-    flex-shrink: 2;
-}
+// .movies__elements1 {
+//     background-image: radial-gradient(circle, #d3d3d3, $whiteColor);
+//     display: grid;
+//     grid-template-columns: repeat(4, 4fr);
+//     grid-gap: 40px;
+//     justify-items: center;
+//     margin-bottom: 20px;
+// }
+// .movie-actor {
+//     background: gray;
+//     display: flex;
+//     flex-shrink: 2;
+// }

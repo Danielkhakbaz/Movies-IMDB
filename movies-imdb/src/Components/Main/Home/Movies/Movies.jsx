@@ -6,33 +6,32 @@ import PropTypes from "prop-types";
 const Movies = ({ searchQuery, movies, imageURL }) => {
     return (
         <>
-            <section className="movies">
+            <div className="movies">
                 <h1 className="movies__title p-4">
                     {searchQuery ? "Searched Movies" : "Popular Movies"}
                 </h1>
                 <div className="movies__elements p-2">
                     {movies.map((movie) => (
-                        <div className="movies__element" key={movie.id}>
+                        <React.Fragment key={movie.id}>
                             <Link to={`/Movies/${movie.id}`}>
                                 {movie.poster_path ? (
                                     <img
-                                        className="movies__elements--img"
+                                        className="movies__element movies__elements--img"
                                         src={`${imageURL}${movie.poster_path}`}
                                         alt="Every Single Movie Pic"
                                     />
                                 ) : (
                                     <img
                                         className="movies__elements--img"
-                                        width="200"
                                         src={NoImageAvailable}
                                         alt="No Available Pic"
                                     />
                                 )}
                             </Link>
-                        </div>
+                        </React.Fragment>
                     ))}
                 </div>
-            </section>
+            </div>
         </>
     );
 };

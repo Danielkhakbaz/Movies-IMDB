@@ -15,12 +15,14 @@ const LoadButton = ({ searchQuery, isLoading, onLoadButton }) => {
             <>
                 <div className="container">
                     <div className="loadmore__button row">
+                        <div className="col-lg-1 col-md-1 col-sm-1 col-1"></div>
                         <button
-                            className="btn col-lg-12 col-md-12 col-sm-12 col-12"
+                            className="btn col-lg-10 col-md-10 col-sm-10 col-10"
                             onClick={onLoadButton}
                         >
                             Load More
                         </button>
+                        <div className="col-lg-1 col-md-1 col-sm-1 col-1"></div>
                     </div>
                 </div>
             </>
