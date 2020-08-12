@@ -1,5 +1,6 @@
 import React from "react";
 import Spinner from "../Spinner/Spinner";
+import PropTypes from "prop-types";
 
 const LoadButton = ({ searchQuery, isLoading, onLoadButton }) => {
     if (isLoading) {
@@ -27,6 +28,12 @@ const LoadButton = ({ searchQuery, isLoading, onLoadButton }) => {
     }
 
     return null;
+};
+
+LoadButton.propTypes = {
+    searchQuery: PropTypes.string.isRequired,
+    isLoading: PropTypes.bool.isRequired,
+    onLoadButton: PropTypes.func.isRequired,
 };
 
 export default LoadButton;
