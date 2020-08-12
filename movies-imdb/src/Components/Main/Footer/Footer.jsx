@@ -54,7 +54,7 @@ const Footer = () => {
                         <i className="fab fa-github" />
                     </a>
                 </div>
-                <div className="footer__h4 row">Made By Danial Khakbaz.</div>
+                <div className="footer__text row">Made By Danial Khakbaz.</div>
             </footer>
         </>
     );
