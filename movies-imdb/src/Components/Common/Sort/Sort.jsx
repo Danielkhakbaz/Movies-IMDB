@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Sort = ({ sorts, sortColumn, onSort }) => {
     const handleSort = (column) => {
@@ -44,6 +45,12 @@ const Sort = ({ sorts, sortColumn, onSort }) => {
             </section>
         </>
     );
+};
+
+Sort.propTypes = {
+    sorts: PropTypes.array.isRequired,
+    sortColumn: PropTypes.object.isRequired,
+    onSort: PropTypes.func.isRequired,
 };
 
 export default Sort;
