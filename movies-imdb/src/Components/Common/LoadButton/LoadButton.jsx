@@ -13,7 +13,7 @@ const LoadButton = ({ searchQuery, isLoading, onLoadButton }) => {
         return (
             <>
                 <div className="container-fluid">
-                    <div className="row movies__button">
+                    <div className="movies__button row">
                         <div className="col-2"></div>
                         <div className="col-8">
                             <button
