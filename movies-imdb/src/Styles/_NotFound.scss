@@ -1,10 +1,10 @@
 .notfound {
     height: 73vh;
-    display: flex;
 }
 .notfound__title {
     font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    align-self: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     text-transform: uppercase;
 }
