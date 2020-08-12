@@ -1,0 +1,41 @@
+export const sorts = [
+    {
+        path: "",
+        labelAsc: "Default",
+        labelDesc: "Default",
+        className: "sorting__button btn btn-info m-2",
+        classNameIconDesc: "fas fa-redo",
+    },
+    {
+        path: "title",
+        labelAsc: "A to Z",
+        labelDesc: "Z to A",
+        className: "sorting__button btn btn-warning m-2",
+        classNameIconAsc: "fas fa-sort-alpha-down",
+        classNameIconDesc: "fas fa-sort-alpha-down-alt",
+    },
+    {
+        path: "release_date",
+        labelAsc: "Oldest",
+        labelDesc: "Newest",
+        className: "sorting__button btn btn-primary m-2",
+        classNameIconAsc: "fas fa-calendar-minus",
+        classNameIconDesc: "fas fa-calendar-plus",
+    },
+    {
+        path: "popularity",
+        labelAsc: "Least Popular",
+        labelDesc: "Most Popular",
+        className: "sorting__button btn btn-danger m-2",
+        classNameIconAsc: "fas fa-sort-amount-down-alt",
+        classNameIconDesc: "fas fa-sort-amount-down",
+    },
+    {
+        path: "vote_average",
+        labelAsc: "Worst Rating",
+        labelDesc: "Best Rating",
+        className: "sorting__button btn btn-dark m-2",
+        classNameIconAsc: "fas fa-sort-numeric-down",
+        classNameIconDesc: "fas fa-sort-numeric-down-alt",
+    },
+];

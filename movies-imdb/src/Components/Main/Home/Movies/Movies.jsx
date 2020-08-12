@@ -6,13 +6,13 @@ import PropTypes from "prop-types";
 const Movies = ({ searchQuery, movies, imageURL }) => {
     return (
         <>
-            <div className="movies">
+            <section className="movies">
                 <h1 className="movies__title p-4">
                     {searchQuery ? "Searched Movies" : "Popular Movies"}
                 </h1>
                 <div className="movies__elements p-2">
                     {movies.map((movie) => (
-                        <React.Fragment key={movie.id}>
+                        <div key={movie.id}>
                             <Link to={`/Movies/${movie.id}`}>
                                 {movie.poster_path ? (
                                     <img
@@ -29,10 +29,10 @@ const Movies = ({ searchQuery, movies, imageURL }) => {
                                     />
                                 )}
                             </Link>
-                        </React.Fragment>
+                        </div>
                     ))}
                 </div>
-            </div>
+            </section>
         </>
     );
 };
