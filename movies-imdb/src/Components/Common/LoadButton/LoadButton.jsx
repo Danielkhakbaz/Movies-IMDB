@@ -12,18 +12,14 @@ const LoadButton = ({ searchQuery, isLoading, onLoadButton }) => {
     if (!searchQuery) {
         return (
             <>
-                <div className="container-fluid">
+                <div className="container">
                     <div className="movies__button row">
-                        <div className="col-2"></div>
-                        <div className="col-8">
-                            <button
-                                className="btn col-lg-12 col-md-12 col-sm-12 col-12"
-                                onClick={onLoadButton}
-                            >
-                                Load More
-                            </button>
-                        </div>
-                        <div className="col-2"></div>
+                        <button
+                            className="btn col-lg-12 col-md-12 col-sm-12 col-12"
+                            onClick={onLoadButton}
+                        >
+                            Load More
+                        </button>
                     </div>
                 </div>
             </>
