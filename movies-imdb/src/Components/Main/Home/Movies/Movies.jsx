@@ -16,7 +16,7 @@ const Movies = ({ searchQuery, movies, imageURL }) => {
                             <Link to={`/Movies/${movie.id}`}>
                                 {movie.poster_path ? (
                                     <img
-                                        className="movies__element movies__elements--img"
+                                        className="movies__elements--img"
                                         src={`${imageURL}${movie.poster_path}`}
                                         alt="Every Single Movie Pic"
                                     />

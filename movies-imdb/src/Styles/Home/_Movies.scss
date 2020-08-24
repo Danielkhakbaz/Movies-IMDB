@@ -8,13 +8,6 @@ $center: center;
     text-align: $center;
     text-shadow: 1px 1px #1d1d1d;
 }
-.movies__element {
-    &:hover {
-        transform: translate(0px, -5px);
-        transition: ease-out 0.5s;
-        box-shadow: 2px 2px 5px rgb(41, 41, 41);
-    }
-}
 .movies__elements {
     display: grid;
     grid-template-columns: repeat(5, 4fr);
@@ -29,6 +22,11 @@ $center: center;
     border-radius: 5%;
     box-shadow: 2px 2px 5px #646464;
     cursor: pointer;
+    &:hover {
+        box-shadow: 2px 2px 5px rgb(41, 41, 41);
+        transform: translate(0px, -5px);
+        transition: ease-out 0.5s;
+    }
 }
 @keyframes AnimateGrid {
     from {
