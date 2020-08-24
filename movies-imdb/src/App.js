@@ -3,8 +3,8 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import Header from "./Components/Main/Header/Header";
 import Home from "./Components/Main/Home/Home";
 import MoviePage from "./Components/Main/MoviePage/MoviePage";
-import NotFound from "./Components/Main/NotFound/NotFound";
 import Footer from "./Components/Main/Footer/Footer";
+import NotFound from "./Components/Main/NotFound/NotFound";
 
 const App = () => {
     return (
