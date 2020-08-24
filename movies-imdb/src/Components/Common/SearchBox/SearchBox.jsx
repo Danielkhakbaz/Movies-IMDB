@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const SearchBox = ({ value, onChange }) => {
     return (
         <>
-            <nav className="searchbox navbar">
+            <nav className="navbar searchbox">
                 <input
                     className="form-control m-3"
                     type="search"
