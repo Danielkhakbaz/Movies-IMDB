@@ -3,6 +3,9 @@
     border: 1px solid #a8a8a8;
     box-shadow: 6px 4px 5px #969696;
     &:focus {
-        background: #c5c5c5;
+        background: #dadada;
+        border: none;
+        outline: none;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.397);
     }
 }

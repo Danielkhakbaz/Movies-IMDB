@@ -20,24 +20,33 @@ class MoviePage extends Component {
     fetchData = (movie) => {
         const { match } = this.props;
 
-        fetch(movie)
-            .then((movie) => movie.json())
-            .then((movie) => {
-                const data = `${apiURL}movie/${match.params.id}/credits?api_key=${apiKey}`;
-                fetch(data)
-                    .then((people) => people.json())
-                    .then((people) => {
-                        const director = people.crew.filter(
-                            (people) => people.job === "Director"
-                        );
-                        this.setState({
-                            movie: movie,
-                            director: director,
-                            actors: people.cast,
+        fetch(movie).then((movie) =>
+            movie.status === 404
+                ? this.props.history.push("/NotFound/404")
+                : null
+        );
+
+        if (fetch(movie).then((movie) => movie.status === 200)) {
+            fetch(movie)
+                .then((movie) => movie)
+                .then((movie) => movie.json())
+                .then((movie) => {
+                    const data = `${apiURL}movie/${match.params.id}/credits?api_key=${apiKey}`;
+                    fetch(data)
+                        .then((people) => people.json())
+                        .then((people) => {
+                            const director = people.crew.filter(
+                                (people) => people.job === "Director"
+                            );
+                            this.setState({
+                                movie: movie,
+                                director: director,
+                                actors: people.cast,
+                            });
                         });
-                    });
-            })
-            .catch((error) => console.error("Error", error));
+                })
+                .catch((error) => console.error("Error", error));
+        }
     };
     render() {
         const { movie, director, actors } = this.state;
