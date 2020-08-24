@@ -2,9 +2,9 @@ $whiteColor: #ffffff;
 
 .sorting {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin-top: 1.2rem;
-    flex-wrap: wrap;
 }
 .sorting__button {
     &:hover :first-child {
@@ -13,8 +13,8 @@ $whiteColor: #ffffff;
     }
 }
 .sorting i {
-    color: white;
     font-size: 1.5rem;
+    color: white;
     margin: 6px;
     padding: 3px;
     border: 1px solid $whiteColor;
