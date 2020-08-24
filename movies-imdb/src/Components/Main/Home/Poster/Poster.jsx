@@ -3,7 +3,7 @@ import React from "react";
 const Poster = () => {
     return (
         <>
-            <article className="poster container-fluid">
+            <article className="container-fluid poster">
                 <h1 className="poster__title m-2">Avengers: Infinity War</h1>
                 <p className="poster__overview m-2">
                     As the Avengers and their allies have continued to protect
