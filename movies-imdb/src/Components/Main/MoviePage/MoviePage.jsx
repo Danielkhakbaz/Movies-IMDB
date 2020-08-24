@@ -52,12 +52,12 @@ class MoviePage extends Component {
         const { movie, director, actors } = this.state;
         return (
             <>
-                <div>
+                <section>
                     <Navigation movieName={movie.original_title} />
                     <Movie movie={movie} director={director} actors={actors} />
                     <Budget movie={movie} />
                     <Actors actors={actors} />
-                </div>
+                </section>
             </>
         );
     }

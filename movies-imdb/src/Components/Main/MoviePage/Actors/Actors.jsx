@@ -6,7 +6,7 @@ const Actors = ({ actors }) => {
     const posterSize = "w154";
     return (
         <>
-            <h1>Actors</h1>
+            <h1 className="movies__title">Actors</h1>
             <div className="movies__elements1 p-2">
                 {actors.map((actor) => (
                     <div key={actor.id} className="movie-actor">
@@ -21,7 +21,6 @@ const Actors = ({ actors }) => {
                             alt="Every Single Movie Pic"
                         />
                         <h6>{actor.name}</h6>
-                        <h6>{actor.character}</h6>
                     </div>
                 ))}
             </div>

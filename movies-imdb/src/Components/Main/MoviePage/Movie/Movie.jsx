@@ -2,11 +2,9 @@ import React from "react";
 import {
     imageBaseURL,
     backdropSize,
-    posterSize,
 } from "../../../../Services/API/Config.json";
-import HeaderImage from "../../../../Assets/Images/Header-Movies-Image.jpg";
 
-const Movie = ({ movie, director, actors }) => {
+const Movie = ({ movie, director }) => {
     const getBackgroundPoster = () => {
         if (movie.backdrop_path !== undefined) {
             const backgroundPoster = `${imageBaseURL}${backdropSize}${movie.backdrop_path}`;
@@ -18,36 +16,56 @@ const Movie = ({ movie, director, actors }) => {
     return (
         <>
             <div
-                className="movie row"
+                className="movie container-fluid"
                 style={{
                     backgroundImage: `url(${backgroundPoster})`,
                 }}
             >
-                <div className="col-lg-1 col-md-1 col-sm-1 col-1"></div>
-                <div className="movie__content col-lg-10 col-md-10 col-sm-10 col-10">
+                <div className="movie__content container">
                     <img
-                        src={`${imageBaseURL}${posterSize}${movie.poster_path}`}
+                        className="movie__content--img"
+                        src={`${imageBaseURL}w300${movie.poster_path}`}
                         alt="img"
                     />
-                    <h1 style={{ color: "white" }}>{movie.original_title}</h1>
-                    <p style={{ color: "white" }}>PLOT</p>
-                    <h4 style={{ color: "white" }}>{movie.overview}</h4>
-                    <meter
-                        min="0"
-                        max="100"
-                        optimum="100"
-                        low="40"
-                        high="70"
-                        value={movie.vote_average}
-                        style={{ width: "100%" }}
-                    />
-                    <p>director : </p>
-                    {director.length > 1
-                        ? director.map((director) => director.name)
-                        : director.name}
-                    <img src={HeaderImage} alt="" width="40" height="40" />
+                    <div
+                        className="p-2"
+                        style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            margin: "10px",
+                            color: "white",
+                        }}
+                    >
+                        <h1
+                            className="movie__row--title my-2"
+                            style={{ color: "white" }}
+                        >
+                            {movie.original_title}
+                        </h1>
+                        <h6
+                            className="movie__content--p my-2"
+                            style={{ color: "white" }}
+                        >
+                            Overview
+                        </h6>
+                        <p className="my-2" style={{ color: "white" }}>
+                            {movie.overview}
+                        </p>
+                        <meter
+                            className="my-2"
+                            min="0"
+                            max="100"
+                            low="40"
+                            optimum="100"
+                            value={movie.vote_average}
+                            style={{ width: "100%" }}
+                        />
+                        <p className="Movie__p my-2">
+                            {director.length > 1 ? "Directors : " : "Director"}
+                        </p>
+                        {director.map((director) => director.name + " , ")}
+                    </div>
                 </div>
-                <div className="col-lg-1 col-md-1 col-sm-1 col-1"></div>
             </div>
         </>
     );
