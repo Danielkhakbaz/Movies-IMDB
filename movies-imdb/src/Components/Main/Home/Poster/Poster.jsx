@@ -4,8 +4,8 @@ const Poster = () => {
     return (
         <>
             <article className="container-fluid poster">
-                <h1 className="poster__title m-2">Avengers: Infinity War</h1>
-                <p className="poster__overview m-2">
+                <h1 className="m-2 poster__title">Avengers: Infinity War</h1>
+                <p className="m-2 poster__overview">
                     As the Avengers and their allies have continued to protect
                     the world from threats too large for any one hero to handle,
                     a new danger has emerged from the cosmic shadows: Thanos. A

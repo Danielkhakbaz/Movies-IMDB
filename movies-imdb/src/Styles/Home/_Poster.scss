@@ -1,6 +1,7 @@
+$whiteColor: #ffffff;
 @mixin posterText {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    color: rgb(240, 240, 240);
+    color: $whiteColor;
     text-shadow: 1px 1px #1d1d1d;
 }
 
