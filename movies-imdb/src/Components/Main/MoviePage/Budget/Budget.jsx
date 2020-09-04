@@ -2,7 +2,7 @@ import React from "react";
 import {
     calcTime,
     convertMoney,
-} from "./../../../../Services/Convertor/Convertor";
+} from "../../../../Services/Convertor/Convertor";
 
 const Budget = ({ movie }) => {
     return (

@@ -1,4 +1,4 @@
-export const sorts = [
+export const sortingMovies = [
     {
         path: "",
         labelAsc: "Default",

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Sort = ({ sorts, sortColumn, onSort }) => {
+const Sort = ({ sortingMovies, sortColumn, onSort }) => {
     const handleSort = (column) => {
         if (sortColumn.path === column) {
             sortColumn.order = sortColumn.order === "asc" ? "desc" : "asc";
@@ -17,7 +17,7 @@ const Sort = ({ sorts, sortColumn, onSort }) => {
             <section className="container-fluid">
                 <div className="row">
                     <div className="sorting col-lg-12 col-md-12 col-sm-12 col-12">
-                        {sorts.map((sort) => (
+                        {sortingMovies.map((sort) => (
                             <button
                                 className={sort.className}
                                 key={sort.path}
@@ -48,7 +48,7 @@ const Sort = ({ sorts, sortColumn, onSort }) => {
 };
 
 Sort.propTypes = {
-    sorts: PropTypes.array.isRequired,
+    sortingMovies: PropTypes.array.isRequired,
     sortColumn: PropTypes.object.isRequired,
     onSort: PropTypes.func.isRequired,
 };

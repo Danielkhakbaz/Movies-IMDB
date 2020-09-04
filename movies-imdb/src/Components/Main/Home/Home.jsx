@@ -4,7 +4,7 @@ import Sort from "../../Common/Sort/Sort";
 import SearchBox from "../../Common/SearchBox/SearchBox";
 import Movies from "./Movies/Movies";
 import LoadButton from "../../Common/LoadButton/LoadButton";
-import { sorts } from "../../../Services/Sort/Sort";
+import { sortingMovies } from "../../../Services/SortingMovies/SortingMovies";
 import {
     apiURL,
     apiKey,
@@ -42,7 +42,7 @@ class Home extends Component {
             <>
                 <Poster />
                 <Sort
-                    sorts={sorts}
+                    sortingMovies={sortingMovies}
                     sortColumn={sortColumn}
                     onSort={this.handleSorting}
                 />
