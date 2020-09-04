@@ -16,7 +16,7 @@ const Sort = ({ sortingMovies, sortColumn, onSort }) => {
         <>
             <section className="container-fluid">
                 <div className="row">
-                    <div className="sorting col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div className="col-lg-12 col-md-12 col-sm-12 col-12 sorting">
                         {sortingMovies.map((sort) => (
                             <button
                                 className={sort.className}

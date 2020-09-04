@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 const SearchBox = ({ value, onChange }) => {
     return (
         <>
-            <nav className="navbar searchbox">
+            <nav className="navbar">
                 <input
-                    className="form-control m-3"
+                    className="form-control m-3 searchbox"
                     type="search"
                     value={value}
                     onChange={(e) => onChange(e.target.value)}

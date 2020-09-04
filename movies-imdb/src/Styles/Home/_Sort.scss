@@ -12,11 +12,11 @@ $whiteColor: #ffffff;
         transition: ease-out 0.5s;
     }
 }
-.sorting i {
+.sorting__icon  {
     font-size: 1.5rem;
     color: white;
-    margin: 6px;
-    padding: 3px;
+    margin: 0.4rem;
+    padding: 0.2rem;
     border: 1px solid $whiteColor;
     border-radius: 4px;
 }

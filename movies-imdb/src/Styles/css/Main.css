@@ -1,350 +1,356 @@
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-  height: 11vh;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), black);
-  display: flex;
+    height: 11vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), black);
+    display: flex;
 }
 
 header img {
-  width: 20%;
-  margin: 1% 5%;
+    width: 20%;
+    margin: 1% 5%;
 }
 
 .poster {
-  height: 89vh;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.98), rgba(0, 0, 0, 0.4)), url(https://wallpaperstream.com/wallpapers/thumbnails/avengers-infinity-war/Avengers-Infinity-War-Full-Casts-Poster_thumb2x.jpg);
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+    height: 89vh;
+    background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.98),
+            rgba(0, 0, 0, 0.4)
+        ),
+        url(https://wallpaperstream.com/wallpapers/thumbnails/avengers-infinity-war/Avengers-Infinity-War-Full-Casts-Poster_thumb2x.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .poster__title {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: #f0f0f0;
-  text-shadow: 1px 1px #1d1d1d;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #f0f0f0;
+    text-shadow: 1px 1px #1d1d1d;
 }
 
 .poster__overview {
-  width: 80%;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: #f0f0f0;
-  text-shadow: 1px 1px #1d1d1d;
+    width: 80%;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #f0f0f0;
+    text-shadow: 1px 1px #1d1d1d;
 }
 
 .sorting {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1.2rem;
 }
 
 .sorting__button:hover :first-child {
-  transform: translate(0px, -5px);
-  transition: ease-out 0.5s;
+    transform: translate(0px, -5px);
+    transition: ease-out 0.5s;
 }
 
 .sorting i {
-  font-size: 1.5rem;
-  color: white;
-  margin: 6px;
-  padding: 3px;
-  border: 1px solid #ffffff;
-  border-radius: 4px;
+    font-size: 1.5rem;
+    color: white;
+    margin: 6px;
+    padding: 3px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
 }
 
 .sorting__title {
-  color: white;
+    color: white;
 }
 
-.searchbox input {
-  background: #eaeaea;
-  border: 1px solid #a8a8a8;
-  box-shadow: 6px 4px 5px #969696;
+.searchbox {
+    background: #eaeaea;
+    border: 1px solid #a8a8a8;
+    box-shadow: 6px 4px 5px #969696;
 }
 
-.searchbox input:focus {
-  background: #dadada;
-  border: none;
-  outline: none;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.397);
+.searchbox:focus {
+    background: #dadada;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.397);
 }
 
 .movies {
-  background-image: radial-gradient(circle, #d3d3d3, #ffffff);
+    background-image: radial-gradient(circle, #d3d3d3, #ffffff);
 }
 
 .movies__title {
-  text-align: center;
-  text-shadow: 1px 1px #1d1d1d;
+    text-align: center;
+    text-shadow: 1px 1px #1d1d1d;
 }
 
 .movies__elements {
-  display: grid;
-  grid-template-columns: repeat(5, 4fr);
-  grid-gap: 40px;
-  justify-items: center;
-  margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 4fr);
+    grid-gap: 40px;
+    justify-items: center;
+    margin-bottom: 20px;
 }
 
 .movies__elements--img {
-  animation: AnimateGrid 0.5s;
-  justify-self: center;
-  border: 1px solid #e1e1e1;
-  border-radius: 5%;
-  box-shadow: 2px 2px 5px #646464;
-  cursor: pointer;
+    animation: AnimateGrid 0.5s;
+    justify-self: center;
+    border: 1px solid #e1e1e1;
+    border-radius: 5%;
+    box-shadow: 2px 2px 5px #646464;
+    cursor: pointer;
 }
 
 .movies__elements--img:hover {
-  box-shadow: 2px 2px 5px #292929;
-  transform: translate(0px, -5px);
-  transition: ease-out 0.5s;
+    box-shadow: 2px 2px 5px #292929;
+    transform: translate(0px, -5px);
+    transition: ease-out 0.5s;
 }
 
 @keyframes AnimateGrid {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width: 1194px) {
-  .movies__elements {
-    grid-template-columns: repeat(4, 1fr);
-  }
+    .movies__elements {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 @media screen and (max-width: 953px) {
-  .movies__elements {
-    grid-template-columns: repeat(3, 1fr);
-  }
+    .movies__elements {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media screen and (max-width: 710px) {
-  .movies__elements {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .movies__elements--img {
-    width: 160px;
-  }
+    .movies__elements {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .movies__elements--img {
+        width: 160px;
+    }
 }
 
 .loadmore__button button {
-  background-color: #16d47b;
-  color: #ffffff;
+    background-color: #16d47b;
+    color: #ffffff;
 }
 
 .loading__icon {
-  width: 50px;
-  height: 50px;
-  animation: spinningButton 0.8s linear infinite;
-  border: 5px solid #ffffff;
-  border-top: 5px solid #16d47b;
-  border-radius: 50%;
-  margin: 20px auto;
+    width: 50px;
+    height: 50px;
+    animation: spinningButton 0.8s linear infinite;
+    border: 5px solid #ffffff;
+    border-top: 5px solid #16d47b;
+    border-radius: 50%;
+    margin: 20px auto;
 }
 
 @keyframes spinningButton {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .navigation {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  background: #555555;
-  padding: 6px 0;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    background: #555555;
+    padding: 6px 0;
 }
 
 .navigation__link {
-  font-size: 18px;
-  color: #2c2c2c;
-  text-decoration: none;
+    font-size: 18px;
+    color: #2c2c2c;
+    text-decoration: none;
 }
 
 .navigation__link:hover {
-  color: chartreuse;
-  text-decoration: none;
+    color: chartreuse;
+    text-decoration: none;
 }
 
 .navigation__span {
-  font-size: 16px;
-  color: white;
+    font-size: 16px;
+    color: white;
 }
 
 .movie {
-  background-size: cover;
-  background-position: center;
-  padding: 40px 20px;
-  box-sizing: border-box;
-  animation: animateMovieinfo 1s;
+    background-size: cover;
+    background-position: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    animation: animateMovieinfo 1s;
 }
 
 @keyframes animateMovieinfo {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .movie__content {
-  display: flex;
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 8px;
-  margin: 0 auto;
+    display: flex;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    margin: 0 auto;
 }
 
 .movie__content--img {
-  display: flex;
-  align-self: center;
-  border-radius: 2px;
+    display: flex;
+    align-self: center;
+    border-radius: 2px;
 }
 
 .movies__elements1 {
-  background-image: radial-gradient(circle, #d3d3d3, #ffffff);
-  display: grid;
-  grid-template-columns: repeat(5, 4fr);
-  grid-gap: 40px;
-  justify-items: center;
-  margin-bottom: 20px;
+    background-image: radial-gradient(circle, #d3d3d3, #ffffff);
+    display: grid;
+    grid-template-columns: repeat(5, 4fr);
+    grid-gap: 40px;
+    justify-items: center;
+    margin-bottom: 20px;
 }
 
 .movie-actor {
-  background: #dfdfdf;
-  display: grid;
-  padding: 10px;
-  border-radius: 5%;
-  box-shadow: 2px 2px 5px #646464;
+    background: #dfdfdf;
+    display: grid;
+    padding: 10px;
+    border-radius: 5%;
+    box-shadow: 2px 2px 5px #646464;
 }
 
 .movie-actor h6 {
-  display: flex;
-  justify-self: center;
-  padding: 5px;
+    display: flex;
+    justify-self: center;
+    padding: 5px;
 }
 
 @media screen and (max-width: 710px) {
-  .movie__content--img {
-    display: none;
-  }
+    .movie__content--img {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 1194px) {
-  .movies__elements1 {
-    grid-template-columns: repeat(4, 1fr);
-  }
+    .movies__elements1 {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 @media screen and (max-width: 953px) {
-  .movies__elements1 {
-    grid-template-columns: repeat(3, 1fr);
-  }
+    .movies__elements1 {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media screen and (max-width: 710px) {
-  .movies__elements1 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .movies__elements1--img {
-    width: 160px;
-  }
+    .movies__elements1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .movies__elements1--img {
+        width: 160px;
+    }
 }
 
 footer {
-  background: #2b2b2b;
+    background: #2b2b2b;
 }
 
 .footer__links {
-  justify-content: center;
-  border-bottom: 1px solid #545454;
+    justify-content: center;
+    border-bottom: 1px solid #545454;
 }
 
 .footer__links a {
-  padding: 1rem;
+    padding: 1rem;
 }
 
 .footer__links a[name="instagram"] {
-  color: #e1306c;
+    color: #e1306c;
 }
 
 .footer__links a[name="instagram"]:hover {
-  color: #fff;
-  transition: 0.5s;
+    color: #fff;
+    transition: 0.5s;
 }
 
 .footer__links a[name="twitter"] {
-  color: #00acee;
+    color: #00acee;
 }
 
 .footer__links a[name="twitter"]:hover {
-  color: #fff;
-  transition: 0.5s;
+    color: #fff;
+    transition: 0.5s;
 }
 
 .footer__links a[name="telegram"] {
-  color: #0088cc;
+    color: #0088cc;
 }
 
 .footer__links a[name="telegram"]:hover {
-  color: #fff;
-  transition: 0.5s;
+    color: #fff;
+    transition: 0.5s;
 }
 
 .footer__links a[name="mail"] {
-  color: #dc483c;
+    color: #dc483c;
 }
 
 .footer__links a[name="mail"]:hover {
-  color: #fff;
-  transition: 0.5s;
+    color: #fff;
+    transition: 0.5s;
 }
 
 .footer__links a[name="linkedin"] {
-  color: #0e76a8;
+    color: #0e76a8;
 }
 
 .footer__links a[name="linkedin"]:hover {
-  color: #fff;
-  transition: 0.5s;
+    color: #fff;
+    transition: 0.5s;
 }
 
 .footer__links a[name="github"] {
-  color: #484646;
+    color: #484646;
 }
 
 .footer__links a[name="github"]:hover {
-  color: #fff;
-  transition: 0.5s;
+    color: #fff;
+    transition: 0.5s;
 }
 
 .footer__text {
-  color: #646464;
-  justify-content: center;
+    color: #646464;
+    justify-content: center;
 }
 
 .notfound {
-  height: 80vh;
+    height: 80vh;
 }
 
 .notfound__title {
-  font-family: Arial, Helvetica, sans-serif;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
 }
 /*# sourceMappingURL=Main.css.map */
