@@ -14,7 +14,7 @@ const LoadButton = ({ searchQuery, isLoading, onLoadButton }) => {
         return (
             <>
                 <div className="container">
-                    <div className="row loadmore__button my-4">
+                    <div className="row my-4 loadmore__button">
                         <div className="col-lg-1 col-md-1 col-sm-1 col-1"></div>
                         <button
                             className="btn col-lg-10 col-md-10 col-sm-10 col-10"
