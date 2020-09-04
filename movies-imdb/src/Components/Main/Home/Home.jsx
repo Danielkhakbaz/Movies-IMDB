@@ -36,8 +36,10 @@ class Home extends Component {
 
     render() {
         const { searchQuery, isLoading, sortColumn } = this.state;
+
         const { searched } = this.searchEngine();
         const sorted = _.orderBy(searched, sortColumn.path, sortColumn.order);
+
         return (
             <>
                 <Poster />
