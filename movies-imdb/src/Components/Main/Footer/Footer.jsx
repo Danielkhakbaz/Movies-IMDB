@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <>
             <footer className="container-fluid">
-                <div className="row footer__links p-2">
+                <div className="row p-2 footer__links">
                     <a
                         name="instagram"
                         href="https://www.instagram.com/danielkhakbaz"
@@ -54,7 +54,7 @@ const Footer = () => {
                         <i className="fab fa-github" />
                     </a>
                 </div>
-                <div className="row footer__text p-2">
+                <div className="row p-2 footer__text">
                     Made By Danial Khakbaz.
                 </div>
             </footer>
