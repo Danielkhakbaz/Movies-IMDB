@@ -7,10 +7,10 @@ const Movies = ({ searchQuery, movies, imageURL }) => {
     return (
         <>
             <div className="movies">
-                <h1 className="movies__title p-4">
+                <h1 className="p-4 movies__title">
                     {searchQuery ? "Searched Movies" : "Popular Movies"}
                 </h1>
-                <div className="movies__elements p-2">
+                <div className="p-2 movies__elements">
                     {movies.map((movie) => (
                         <React.Fragment key={movie.id}>
                             <Link to={`/Movies/${movie.id}`}>
