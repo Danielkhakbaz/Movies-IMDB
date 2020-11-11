@@ -1,10 +1,10 @@
 import React from "react";
 import { imageBaseURL } from "../../../../Services/API/Config.json";
-import NoImageAvailable from "../../../../Assets/Images/NoImageAvailable.jpg";
+import PropTypes from "prop-types";
 
 const Actors = ({ actors }) => {
     const posterSize = "w154";
-    console.log(actors);
+
     return (
         <>
             <h1 className="movies__title">Actors</h1>
@@ -15,11 +15,7 @@ const Actors = ({ actors }) => {
                             <img
                                 className="movies__elements--img"
                                 width="150"
-                                src={
-                                    actor.profile_path
-                                        ? `${imageBaseURL}${posterSize}${actor.profile_path}`
-                                        : `${NoImageAvailable}`
-                                }
+                                src={`${imageBaseURL}${posterSize}${actor.profile_path}`}
                                 alt="Every Single Movie Pic"
                             />
                             <h6>{actor.name}</h6>
@@ -29,6 +25,10 @@ const Actors = ({ actors }) => {
             </div>
         </>
     );
+};
+
+Actors.propTypes = {
+    actors: PropTypes.array.isRequired,
 };
 
 export default Actors;

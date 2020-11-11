@@ -4,7 +4,7 @@ import {
     convertMoney,
 } from "../../../../Services/Convertor/Convertor";
 
-const Budget = ({ movie }) => {
+const BudgetNav = ({ movie }) => {
     return (
         <>
             <div className="navigation">
@@ -38,4 +38,4 @@ const Budget = ({ movie }) => {
     );
 };
 
-export default Budget;
+export default BudgetNav;

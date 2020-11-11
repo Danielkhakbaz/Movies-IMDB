@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-const Navigation = ({ movieName }) => {
+const Nav = ({ movieName }) => {
     return (
         <>
             <div className="navigation">
@@ -16,4 +17,8 @@ const Navigation = ({ movieName }) => {
     );
 };
 
-export default Navigation;
+Nav.propTypes = {
+    movieName: PropTypes.string,
+};
+
+export default Nav;

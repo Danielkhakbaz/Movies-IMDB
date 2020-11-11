@@ -33,18 +33,6 @@
     justify-items: center;
     margin-bottom: 20px;
 }
-.movie-actor {
-    background: rgb(223, 223, 223);
-    display: grid;
-    padding: 10px;
-    border-radius: 5%;
-    box-shadow: 2px 2px 5px #646464;
-}
-.movie-actor h6 {
-    display: flex;
-    justify-self: center;
-    padding: 5px;
-}
 
 @media screen and (max-width: 710px) {
     .movie__content--img {

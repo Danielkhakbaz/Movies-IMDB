@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Navigation from "./Navigation/Navigation";
+import Nav from "./Nav/Nav";
 import Movie from "./Movie/Movie";
-import Budget from "./Budget/Budget";
+import BudgetNav from "./BudgetNav/BudgetNav";
 import Actors from "./Actors/Actors";
 import { apiURL, apiKey } from "../../../Services/API/Config.json";
 
@@ -53,9 +53,9 @@ class MoviePage extends Component {
         return (
             <>
                 <section>
-                    <Navigation movieName={movie.original_title} />
+                    <Nav movieName={movie.original_title} />
                     <Movie movie={movie} director={director} actors={actors} />
-                    <Budget movie={movie} />
+                    <BudgetNav movie={movie} />
                     <Actors actors={actors} />
                 </section>
             </>
